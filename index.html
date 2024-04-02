@@ -1,53 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>CV Alberto Ariana Belen</title>
-        <link href=estilos.css" rel="stylesheet" type="text/css">
-    </head>
 
-    <body>
-       <header>
+<head>
+    <meta charset="utf-8">
+    <title>CV Alberto Ariana Belen</title>
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header id="cabecera">
         <h1>Ariana Belen Alberto</h1>
-       </header>
-       <nav></nav>
-       <main>
+    </header>
+    <nav class="botonera">
+        <ul>
+            <li><a href="inicio.html" target="_self">Inicio</a></li>
+            <li><a href="perfil.html" target="_self">Perfil</a></li>
+            <li><a href="portafolio.html" target="_self">Portafolio</a></li>
+            <li><a href="contacto.html" target="_blank">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!--Quería consultar sobre un problema que me ocurre, ya que el tamaño de toda la información
+            en main se ajusta de acuerdo a si agrandas o achicas la ventana.
+            No sé qué tendria que poner para que el tamaño sea fijo-->
         <section>
             <h2>Licenciada en Diseño y Comunicación Visual</h2>
-            <article>
-                <img src="img/imagen_curriculum.jpg" width="200px" height="200px" alt="imagen curriculum">
-                <hr><h3>Perfil Profesional</h3>
-                <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el diseño de afiches y la ilustración digital es mi especialidad. Siempre busco tener un buen trato con mis compañeros y crear una experiencia enriquecedora en el ambiente laboral. Muy predispuesta al aprendizaje. Busco un puesto laboral a largo plazo.</p>
-                <h3>Experiencia Laboral</h3>
-                <p>Marzo 2019 - Noviembre 2019
-                    <br><strong>Instituto Parroquial Santa Clara, Flores, CABA.</strong>
-                    <br>Contable en un proyecto comercial de la materia de Economía.
-                    <br><br>2019 - Actual
-                    <br><strong>Autónoma - Ilustradora Freelance.</strong>
-                    <br>Diseñadora de personajes.</p>
-                <h3>Formación Académica</h3>
-                <p>Bachillerato en Ciencias Sociales y Humanidades
-                    <br><strong>Instituto Parroquial Santa Clara, Flores, Capital Federal.</strong>
-                    <br><br>Licenciatura en Diseño y Comunicación Visual
-                    <br><strong>Universidad Nacional de Lanús, Lanús, Provincia de Bs. As.</strong></p>
-                <h3>Idiomas</h3>
-                <p><li>Español Nativo</li>
-                    <br><li>Ingles Intermedio</li></p>
-                <h3>Programas</h3>
-                <p><li>Adobe Illustrator</li>
-                    <br><li>Adobe Photoshop</li>
-                    <br><li>Adobe InDesign</li>
-                    <br><li>Clip Studio Paint</li>
-                    <br><li>Paint Tool Sai</li></p>
+            <article class="datos_curriculum">
+                <img src="img/imagen_curriculum.jpg" width="236px" height="354px" alt="imagen curriculum">
+
+                <section class="bloque_info" id="perfil_profesional">
+                    <h3>Perfil Profesional</h3>
+                    <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el diseño
+                        de afiches y la ilustración digital es mi especialidad. Siempre busco tener un buen trato con
+                        mis compañeros y crear una experiencia enriquecedora en el ambiente laboral. Muy predispuesta al
+                        aprendizaje. Busco un puesto laboral a largo plazo.</p>
+                </section>
+
+                <section class="bloque_info" id="experiencia_laboral">
+                    <h3>Experiencia Laboral</h3>
+                    <ol>
+                        <li>Marzo 2019 - Noviembre 2019</li>
+                        <p>Instituto Parroquial Santa Clara, Flores, CABA.</p>
+                        <p>Contable en un proyecto comercial de la materia de Economía.</p>
+                    </ol>
+
+                    <ol>
+                        <li>2019 - Actual</li>
+                        <p>Autónoma - Ilustradora Freelance.</p>
+                        <p>Diseñadora de personajes.</p>
+                    </ol>
+                </section>
+
+                <section class="bloque_info" id="formacion_academica">
+                    <h3>Formación Académica</h3>
+                    <ul>
+                        <li>Bachillerato en Ciencias Sociales y Humanidades</li>
+                        <p>Instituto Parroquial Santa Clara, Flores, Capital Federal.</p>
+                        <li>Licenciatura en Diseño y Comunicación Visual</li>
+                        <p>Universidad Nacional de Lanús, Lanús, Provincia de Bs. As.</p>
+                    </ul>
+                </section>
+
+                <section class="bloque_info" id="idiomas">
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li>Español Nativo</li>
+                        <li>Ingles Intermedio</li>
+                    </ul>
+                </section>
+
+                <section class="bloque_info" id="programas">
+                    <h3>Programas</h3>
+                    <ul>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe InDesign</li>
+                        <li>Clip Studio Paint</li>
+                        <li>Paint Tool Sai</li>
+                    </ul>
+                </section>
             </article>
         </section>
-        <aside></aside>
-        <address>
-            <hr><strong>Información de Contacto:</strong>
-            <br>aarianabelen76@gmail.com
-            <br>1122334455
-        </address>
-       </main>
-       <footer><hr><h5><em>Curriculum Vitae para Compu III // Ariana Belen Alberto</em></h5></footer>
-    </body>
+
+        <section class="bloque_contacto">
+            <h4>
+                <p>Información de Contacto:</p>
+                <!--Por el momento puse la info de contacto acá, pero tenía pensado que se abra en otra página-->
+            </h4>
+            <p>Nombre: Ariana Belen Alberto</p>
+            <p>Dirección: Ciudad de Buenos Aires, Argentina</p>
+            <p class="correo">Correo electrónico:
+                <a href="mailto:aarianabelen76@gmail.com?Subject=Hola,%20me%20interesa%20tu%20perfil"
+                    target="_top">aarianabelen76@gmail.com</a>
+            </p>
+            <p class="telefono">Teléfono:
+                <a href="http://wa.me/+5491165093816" target="_blank">+54 11 6509 3816</a>
+            </p>
+
+            <a href="https://www.instagram.com/hail.zerox/" target="_blank">
+                <img class="logo_instagram" src="img/logo_instagram.png" width="30px" height="30px"
+                    alt="logo instagram">
+            </a>
+
+            <a href="https://twitter.com/HailZero" target="_blank">
+                <img class="logo_twitter" src="img/logo_twitter.png" width="30px" height="30px" alt="logo twitter">
+            </a>
+        </section>
+    </main>
+    <footer>
+        <h5 id="parrafo_del_footer">@2024 Curriculum Vitae para Compu III // Ariana Belen Alberto.</h5>
+        <a href="https://catedrawis.notion.site/C-tedra-Wisch-evsky-1b65b942afd84eefb42ff990f273653b" target="_blank">
+            <img src="img/logo_catedra.png" width="100px" height="28px" alt="logo catedra">
+        </a>
+    </footer>
+</body>
+
 </html>
