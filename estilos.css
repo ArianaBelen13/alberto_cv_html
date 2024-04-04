@@ -6,40 +6,12 @@
     padding: 0px;
 }
 
-h1 {
-    color: white;
-    font-family: "Open Sans", "Kanit bold", "sans-serif";
-    font-size: 60px;
-    text-transform: uppercase;
-    padding-left: 120px; 
-    padding-top: 70px;
-}
-
-/* hay formas más cortas de definir los paddings y margins para no escribir tantas líneas de código y resumir, la más común es esta:
-
-padding: 70px 0 0 8px; 
-
-donde el primer valor corresponde al top, el segundo a right, el tercero a bottom y el cuarto a left. el cero al ser un número universal que refiere a la nada no necesita unidad de medida, pero el resto sí. también podría ser:
-
-padding: 70px 120px;
-
-donde el primer valor corresponde a top y bottom, y el segundo a left y right, si quisieras aplicar valores simétricos. */
 
 @font-face {
     font-family: "Kanit bold";
     src: url("fonts/kanit/Kanit-Bold.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
-} /* los estilos generales está bueno dejarlos arriba de todo el documento como una configuración general, es solo por prolijidad pero acá van bien */
-
-h2 {
-    color: black;
-    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
-    font-size: 35px;
-    text-transform: uppercase;
-    padding-left: 120px;
-    padding-top: 30px;
-    padding-bottom: 20px; /* en base a lo explicado arriba fijate de arreglar todos los paddings y margins para que te quede en un solo renglón */
 }
 
 @font-face {
@@ -49,61 +21,72 @@ h2 {
     font-style: normal;
 }
 
-h3 {
-    color: black;
-    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
-    font-size: 20px;
-    text-transform: uppercase;
-    padding-top: 15px;
-    padding-bottom: 5px;
-}
-
-#cabecera {
-    background-color: black;
-    width: 2000px; /* en el caso de los anchos cuando utilizamos medidas fijas tan grandes empezamos a ver problemas en otras pantallas que no tienen el mismo tamaño que la nuestra. Lo ideal es utilizar medidas relativas, en este caso porcentajes. Si lo que buscás es que la cabecera tenga un ancho del total de la pantalla podrías establecer width: 100%; y así ocuparía el total del ancho ya sea en un monitor de 1080px como de 1920px. En los anchos siempre es ideal utilizar medidas relativas. */
-    height: 200px; /* en el caso de las alturas de los objetos es mucho mejor que lo definan los objetos internos y sus margins, o aplicando paddings en el interior */
-}
-
-.botonera {
-    background-color: black;
-    width: 2000px;
-    height: 60px;
-} /* tanto botonera como cabecera tienen casi los mismos estilos a excepción de la altura, podemos resumir esto de dos formas:
-1. en el html incluimos el nav dentro del header, entonces comparten una misma caja
-2. utilizar múltiples selectores, esto sería:
-
-#cabecera, .botonera {
-    background-color: black;
-    width: 2000px;
-}
-
-donde la coma declara que hay dos elementos que comparten lo mismo
-
-*/
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-} /* bien! más adelante cuando veamos flexbox te va a convenir cambiar esta propiedad */
-
-.botonera a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 10px;
-    margin-left: 120px;
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
 @font-face {
     font-family: "Kanit medium";
     src: url("fonts/kanit/Kanit-Medium.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Kanit light";
+    src: url("fonts/kanit/Kanit-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    color: white;
+    font-family: "Open Sans", "Kanit bold", "sans-serif";
+    font-size: 4em;
+    text-transform: uppercase;
+    padding: 70px 0 0 120px;
+}
+
+h2 {
+    color: black;
+    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 30px 0 20px 0;
+}
+
+h3 {
+    color: black;
+    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
+    font-size: 1.3em;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+h4 {
+    font-family: "Open Sans", "Kanit medium", "sans-serif";
+}
+
+#cabecera {
+    background-color: black;
+    /*Tenía pensado poner una imagen de fondo pero no estoy segura si es posible bajar la opacidad*/
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 30px 0 30px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.botonera a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 120px;
+    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-size: 1.3em;
+    text-transform: uppercase;
 }
 
 .botonera a:hover {
@@ -121,16 +104,18 @@ main {
     margin: 0px auto
 }
 
-section {
+p {
     font-family: "Open Sans", "Kanit light", "sans-serif";
-    font-size: 16px;
+}
+
+section article {
+    font-family: "Open Sans", "Kanit light", "sans-serif";
+    font-size: 1em;
+    max-width: 750px;
 }
 
 .datos_curriculum {
-    padding-left: 120px;
-    padding-right: 400px;
-    padding-bottom: 30px;
-    padding-top: 10px; /* resumir */
+    padding: 10px 0 30px 120px;
 
     ul {
         padding-left: 20px;
@@ -175,9 +160,9 @@ section {
 }
 
 .bloque_contacto {
-    padding-left: 120px;
-    padding-right: 400px;
-    padding-bottom: 30px; /* resumir */
+    font-style: normal;
+    font-family: "Open Sans", "Kanit light";
+    padding: 20px 0 30px 0;
 }
 
 .correo a {
@@ -210,22 +195,12 @@ section {
     color: black;
 }
 
-@font-face {
-    font-family: "Kanit light";
-    src: url("fonts/kanit/Kanit-Light.ttf") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 footer {
     background-color: black;
     color: white;
     font-family: "Open Sans", "Kanit light", "sans-serif";
-    font-size: 16px;
     text-decoration: none;
-    padding-left: 120px;
-    padding-top: 30px;
-    padding-bottom: 80px; /* resumir */
+    padding: 30px 0 80px 120px;
 }
 
 #parrafo_del_footer {

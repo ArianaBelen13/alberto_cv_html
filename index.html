@@ -9,109 +9,117 @@
 
 <body>
     <header id="cabecera">
-        <h1>Ariana Belen Alberto</h1>
+        <section class="titular_y_botones">
+            <h1>Ariana Belen Alberto</h1>
+            <nav class="botonera">
+                <ul>
+                    <li><a href="inicio.html" target="_self">Inicio</a></li>
+                    <li><a href="perfil.html" target="_self">Perfil</a></li>
+                    <li><a href="portafolio.html" target="_self">Portafolio</a></li>
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <nav class="botonera">
-        <ul>
-            <li><a href="inicio.html" target="_self">Inicio</a></li>
-            <li><a href="perfil.html" target="_self">Perfil</a></li>
-            <li><a href="portafolio.html" target="_self">Portafolio</a></li>
-            <li><a href="contacto.html" target="_blank">Contacto</a></li>
-        </ul>
-    </nav> <!-- fijate junto a la corrección de css si no te conviene que el nav esté dentro del header -->
 
     <main>
-        <!--Quería consultar sobre un problema que me ocurre, ya que el tamaño de toda la información en main se ajusta de acuerdo a si agrandas o achicas la ventana. No sé qué tendria que poner para que el tamaño sea fijo
-        RTA: fijate en la corrección de css
-        -->
-        <section>
+        <section class="datos_curriculum">
             <h2>Licenciada en Diseño y Comunicación Visual</h2>
-            <article class="datos_curriculum"> <!--una section puede tener varios articles, pero no al revés, y este tiene como 4 sections-->
-                <img src="img/imagen_curriculum.jpg" width="236px" height="354px" alt="imagen curriculum"> <!--el alt es una propiedad que es para el usuario, o sea que tiene que ser para mejorar su estadía en la página, esto quiere decir que justo este admite estar con mayúsculas y caracteres especiales, es lo que se va a mostrar en caso de que la imagen no cargue. Por prolijidad podrías usar mayúsculas y tildes, pero si quisieras podrías poner "Acá pondría mi foto, si tan solo el navegador la hubiese cargado"-->
+            <img src="img/imagen_curriculum.jpg" width="236px" height="354px"
+                alt="Acá pondría mi foto si tan solo el navegador la hubiese cargado">
 
-                <section class="bloque_info" id="perfil_profesional">
-                    <h3>Perfil Profesional</h3>
-                    <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el diseño
-                        de afiches y la ilustración digital es mi especialidad. Siempre busco tener un buen trato con
-                        mis compañeros y crear una experiencia enriquecedora en el ambiente laboral. Muy predispuesta al
-                        aprendizaje. Busco un puesto laboral a largo plazo.</p> <!--entiendo que lo que querés lograr es que la línea de texto no sea tan larga pero no es por acá. En el código va siempre todo en una sola línea porque se trata de un solo elemento, pero en css podríamos establecer la propiedad max-width que nos va a decir que quiero que el tamaño máximo de mi caja sea de tantos píxeles, entonces vas a tener una caja flexible que no te genere scroll horizontal -->
-                </section>
+            <article class="bloque_info" id="perfil_profesional">
+                <h3>Perfil Profesional</h3>
+                <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el diseño de
+                    afiches y la ilustración digital es mi especialidad (más especificamente el diseño de personajes).
+                    Siempre busco tener un buen trato con mis compañeros y crear una experiencia enriquecedora en el
+                    ambiente laboral. Muy predispuesta al aprendizaje. Busco un puesto laboral a largo plazo.</p>
+                <!--entiendo que lo que querés lograr es que la línea de texto no sea tan larga pero no es por acá. En el código va siempre todo en una sola línea porque se trata de un solo elemento, pero en css podríamos establecer la propiedad max-width que nos va a decir que quiero que el tamaño máximo de mi caja sea de tantos píxeles, entonces vas a tener una caja flexible que no te genere scroll horizontal -->
+                <!--RTA alumna: Creo que ya lo corregí. Había tocado para dividir sin saber, perdón jaja. Con respecto a la propiedad max-width, la puse pero no sé si está bien aplicada-->
+            </article>
 
-                <section class="bloque_info" id="experiencia_laboral">
-                    <h3>Experiencia Laboral</h3>
-                    <ol>
-                        <li>Marzo 2019 - Noviembre 2019</li>
-                        <p>Instituto Parroquial Santa Clara, Flores, CABA.</p> <!--una ol sólo puede contener li, pero un li puede contener más de un elemento, acá tendrías que resolver qué hacer con las p -->
+            <article class="bloque_info" id="experiencia_laboral">
+                <h3>Experiencia Laboral</h3>
+                <ol>
+                    <li>
+                        Marzo 2019 - Noviembre 2019
+                        <p>Instituto Parroquial Santa Clara, Flores, CABA.</p>
                         <p>Contable en un proyecto comercial de la materia de Economía.</p>
-                    </ol>
+                    </li>
+                </ol>
 
-                    <ol>
-                        <li>2019 - Actual</li>
+                <ol>
+                    <li>
+                        2019 - Actual
                         <p>Autónoma - Ilustradora Freelance.</p>
                         <p>Diseñadora de personajes.</p>
-                    </ol>
-                </section>
-
-                <section class="bloque_info" id="formacion_academica">
-                    <h3>Formación Académica</h3>
-                    <ul>
-                        <li>Bachillerato en Ciencias Sociales y Humanidades</li>
-                        <p>Instituto Parroquial Santa Clara, Flores, Capital Federal.</p> <!--mismo problema que las otras listas -->
-                        <li>Licenciatura en Diseño y Comunicación Visual</li>
-                        <p>Universidad Nacional de Lanús, Lanús, Provincia de Bs. As.</p>
-                    </ul>
-                </section>
-
-                <section class="bloque_info" id="idiomas">
-                    <h3>Idiomas</h3>
-                    <ul>
-                        <li>Español Nativo</li>
-                        <li>Ingles Intermedio</li>
-                    </ul>
-                </section>
-
-                <section class="bloque_info" id="programas">
-                    <h3>Programas</h3>
-                    <ul>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe InDesign</li>
-                        <li>Clip Studio Paint</li>
-                        <li>Paint Tool Sai</li>
-                    </ul>
-                </section>
+                    </li>
+                </ol>
             </article>
-        </section>
 
-        <section class="bloque_contacto"> <!--hay una etiqueta adress que va mejor con elementos de contacto-->
-            <h4>
-                <p>Información de Contacto:</p>
-                <!--Por el momento puse la info de contacto acá, pero tenía pensado que se abra en otra página-->
-            </h4>
-            <p>Nombre: Ariana Belen Alberto</p>
-            <p>Dirección: Ciudad de Buenos Aires, Argentina</p>
-            <p class="correo">Correo electrónico:
-                <a href="mailto:aarianabelen76@gmail.com?Subject=Hola,%20me%20interesa%20tu%20perfil"
-                    target="_top">aarianabelen76@gmail.com</a>
-            </p>
-            <p class="telefono">Teléfono:
-                <a href="http://wa.me/+5491165093816" target="_blank">+54 11 6509 3816</a>
-            </p>
+            <article class="bloque_info" id="formacion_academica">
+                <h3>Formación Académica</h3>
+                <ul>
+                    <li>Bachillerato en Ciencias Sociales y Humanidades
+                        <p>Instituto Parroquial Santa Clara, Flores, Capital Federal.</p>
+                    </li>
+                    <li>Licenciatura en Diseño y Comunicación Visual
+                        <p>Universidad Nacional de Lanús, Lanús, Provincia de Bs. As.</p>
+                    </li>
+                </ul>
+            </article>
 
-            <a href="https://www.instagram.com/hail.zerox/" target="_blank">
-                <img class="logo_instagram" src="img/logo_instagram.png" width="30px" height="30px"
-                    alt="logo instagram">
-            </a>
+            <article class="bloque_info" id="idiomas">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español Nativo</li>
+                    <li>Ingles Intermedio</li>
+                </ul>
+            </article>
 
-            <a href="https://twitter.com/HailZero" target="_blank">
-                <img class="logo_twitter" src="img/logo_twitter.png" width="30px" height="30px" alt="logo twitter">
-            </a>
+            <article class="bloque_info" id="programas">
+                <h3>Programas</h3>
+                <ul>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe InDesign</li>
+                    <li>Clip Studio Paint</li>
+                    <li>Paint Tool Sai</li>
+                </ul>
+            </article>
+
+            <address class="bloque_contacto">
+                <h4>
+                    <p>Información de Contacto:</p>
+                    <!--Por el momento puse la info de contacto acá, pero tenía pensado que se abra en otra página-->
+                </h4>
+                <p>Nombre: Ariana Belen Alberto</p>
+                <p>Dirección: Ciudad de Buenos Aires, Argentina</p>
+                <p class="correo">Correo electrónico:
+                    <a href="mailto:aarianabelen76@gmail.com?Subject=Hola,%20me%20interesa%20tu%20perfil."
+                        target="_top">aarianabelen76@gmail.com</a>
+                </p>
+                <p class="telefono">Teléfono:
+                    <a href="http://wa.me/+5491165093816" target="_blank">+54 11 6509 3816</a>
+                </p>
+
+                <a href="https://www.instagram.com/hail.zerox/" target="_blank">
+                    <img class="logo_instagram" src="img/logo_instagram.png" width="30px" height="30px"
+                        alt="Logo instagram: Hail.Zerox">
+                </a>
+
+                <a href="https://twitter.com/HailZero" target="_blank">
+                    <img class="logo_twitter" src="img/logo_twitter.png" width="30px" height="30px"
+                        alt="Logo Twitter: HailZero">
+                </a>
+            </address>
         </section>
     </main>
+
     <footer>
         <h5 id="parrafo_del_footer">@2024 Curriculum Vitae para Compu III // Ariana Belen Alberto.</h5>
-        <a href="https://catedrawis.notion.site/C-tedra-Wisch-evsky-1b65b942afd84eefb42ff990f273653b" target="_blank"> <!--❤-->
-            <img src="img/logo_catedra.png" width="100px" height="28px" alt="logo catedra">
+        <a href="https://catedrawis.notion.site/C-tedra-Wisch-evsky-1b65b942afd84eefb42ff990f273653b" target="_blank">
+            <img src="img/logo_catedra.png" width="100px" height="28px" alt="Logo de la Cátedra Wischñevsky">
         </a>
     </footer>
 </body>
