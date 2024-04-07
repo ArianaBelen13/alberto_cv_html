@@ -73,6 +73,7 @@ h4 {
 nav ul {
     list-style: none;
     padding: 30px 0 30px 0;
+    margin-left: 120px;
 }
 
 nav ul li {
@@ -83,7 +84,7 @@ nav ul li {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-    margin-left: 120px;
+    margin-right: 88px;
     font-family: "Open Sans", "Kanit medium", "sans-serif";
     font-size: 1.3em;
     text-transform: uppercase;
