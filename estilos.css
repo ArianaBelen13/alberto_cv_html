@@ -6,7 +6,6 @@
     padding: 0px;
 }
 
-
 @font-face {
     font-family: "Kanit bold";
     src: url("fonts/kanit/Kanit-Bold.ttf") format('truetype');
@@ -40,19 +39,25 @@ h1 {
     font-family: "Open Sans", "Kanit bold", "sans-serif";
     font-size: 4em;
     text-transform: uppercase;
-    padding: 70px 0 0 120px;
+    padding: 30px 0;
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
-    color: black;
-    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
-    font-size: 2em;
-    text-transform: uppercase;
-    padding: 30px 0 20px 0;
+    color: white;
+    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-size: 1.8em;
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
-    color: black;
+    color: rgb(133, 26, 88);
     font-family: "Open Sans", "Kanit extrabold", "sans-serif";
     font-size: 1.3em;
     text-transform: uppercase;
@@ -65,34 +70,40 @@ h4 {
 }
 
 #cabecera {
-    background-color: black;
+    background-color: rgb(133, 26, 88);
     /*Tenía pensado poner una imagen de fondo pero no estoy segura si es posible bajar la opacidad*/
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: rgb(133, 26, 88);
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 30px 0 30px 0;
-    margin-left: 120px;
-}
-
-nav ul li {
-    display: inline;
+    width: 900px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .botonera a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-    margin-right: 88px;
     font-family: "Open Sans", "Kanit medium", "sans-serif";
     font-size: 1.3em;
     text-transform: uppercase;
 }
 
 .botonera a:hover {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: rgb(43, 107, 136);
 }
 
 .botonera a:active {
@@ -100,9 +111,20 @@ nav ul li {
     background-color: darkgoldenrod;
 }
 
+.foto_curriculum img {
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 main {
     background-color: darkgoldenrod;
-    margin: 0px auto
+    margin: 0px auto;
+    padding: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p {
@@ -112,15 +134,11 @@ p {
 section article {
     font-family: "Open Sans", "Kanit light", "sans-serif";
     font-size: 1em;
-    max-width: 750px;
+    max-width: 800px;
 }
 
 .datos_curriculum {
-    padding: 10px 0 30px 120px;
-
-    ul {
-        padding-left: 20px;
-    }
+    padding: 10px 0 30px 0;
 
     ol {
         list-style: disc;
@@ -132,12 +150,28 @@ section article {
     }
 }
 
+.estructura {
+    width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        padding-left: 0;
+    }
+
+    /*Tenía pensado que la columna derecha esté a la altura de la imagen, mientras que la izquierda se quedara debajo, pero no sabía cómo hacerlo y no tuve más tiempo para probar T-T.*/
+}
+
 #perfil_profesional h3:hover {
-    color: darkslategrey;
+    color: rgb(43, 107, 136);
 }
 
 #experiencia_laboral h3:hover {
-    color: darkslategrey;
+    color: rgb(43, 107, 136);
 }
 
 #experiencia_laboral li {
@@ -145,7 +179,7 @@ section article {
 }
 
 #formacion_academica h3:hover {
-    color: darkslategrey;
+    color: rgb(43, 107, 136);
 }
 
 #formacion_academica li {
@@ -153,17 +187,41 @@ section article {
 }
 
 #idiomas h3:hover {
-    color: darkslategrey;
+    color: rgb(43, 107, 136);
 }
 
 #programas h3:hover {
-    color: darkslategrey;
+    color: rgb(43, 107, 136);
+}
+
+.medidor_de_progreso {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.item {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+
+.fondo_celeste {
+    background-color: rgb(43, 107, 136);
+}
+
+.fondo_negro {
+    background-color: black;
 }
 
 .bloque_contacto {
     font-style: normal;
     font-family: "Open Sans", "Kanit light";
-    padding: 20px 0 30px 0;
+    padding: 20px 0 0 0;
 }
 
 .correo a {
@@ -197,11 +255,15 @@ section article {
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(133, 26, 88);
     color: white;
     font-family: "Open Sans", "Kanit light", "sans-serif";
     text-decoration: none;
-    padding: 30px 0 80px 120px;
+    padding: 30px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #parrafo_del_footer {
