@@ -37,23 +37,18 @@
 h1 {
     color: white;
     font-family: "Open Sans", "Kanit bold", "sans-serif";
-    font-size: 4em;
+    font-size: 4.5em;
     text-transform: uppercase;
     padding: 30px 0;
-    width: 900px; /*guarda con los anchos fijos, no está bueno ponerlos a menos que sean necesarios, en este caso si lo sacás no cambia en nada el diseño*/
-    height: 80px; /*mismo acá, entiendo que es para que esté más cerca del h2 pero hay otra propiedad que es line-height para la interlinea y te puede servir mejor*/
-    display: flex; /*en realidad, el flex debería aplicarse al padre, o sea, el div donde está contenido*/
-    justify-content: center; 
+    line-height: 80px;
+    /*display: flex; /*en realidad, el flex debería aplicarse al padre, o sea, el div donde está contenido*/
+    /*justify-content: center;*/
 }
 
 h2 {
     color: white;
     font-family: "Open Sans", "Kanit medium", "sans-serif";
     font-size: 1.8em;
-    width: 900px; /*misma corrección que h1*/
-    height: 80px; /*idem*/
-    display: flex;
-    justify-content: center;
 }
 
 h3 {
@@ -70,25 +65,23 @@ h4 {
 }
 
 #cabecera {
+    background-image: url(img/fondo_ilustracion.jpg);
     background-color: rgb(133, 26, 88);
-    /*Tenía pensado poner una imagen de fondo pero no estoy segura si es posible bajar la opacidad*/
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-nav {
-    background-color: rgb(133, 26, 88);
+    height: 800px;
     display: flex;
     justify-content: center;
 }
 
 nav ul {
     list-style: none;
-    width: 900px; /*misma corrección de anchos fijos, acá te convendría utilizar porcentajes*/
-    height: 80px; /*otra dorma de darle altura a los objejos es por medio de los paddings y margins, esta opción está bien pero nos gusta más que el tamaño se adapte al contenido y no que esté fijo*/
+    width: 100%;
+    padding: 25px 0;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -111,6 +104,11 @@ nav ul {
     background-color: darkgoldenrod;
 }
 
+.titulo_y_subtitulo h2 {
+    display: flex;
+    justify-content: center;
+}
+
 .foto_curriculum img {
     background-size: cover;
     width: 300px;
@@ -127,17 +125,21 @@ main {
     align-items: center;
 }
 
+.bold_items {
+    font-family: "Open Sans", "Kanit medium", "sans-serif";
+}
+
 p {
     font-family: "Open Sans", "Kanit light", "sans-serif";
 }
 
-section article {
+div article {
     font-family: "Open Sans", "Kanit light", "sans-serif";
     font-size: 1em;
-    max-width: 800px; /*perfecto*/
+    max-width: 800px;
 }
 
-.datos_curriculum {
+#contenedor_curriculum {
     padding: 10px 0 30px 0;
 
     ol {
@@ -151,7 +153,7 @@ section article {
 }
 
 .estructura {
-    width: 900px;
+    width: 800px;
     display: flex;
     flex-direction: row-reverse;
 
