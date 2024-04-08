@@ -40,18 +40,18 @@ h1 {
     font-size: 4em;
     text-transform: uppercase;
     padding: 30px 0;
-    width: 900px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
+    width: 900px; /*guarda con los anchos fijos, no está bueno ponerlos a menos que sean necesarios, en este caso si lo sacás no cambia en nada el diseño*/
+    height: 80px; /*mismo acá, entiendo que es para que esté más cerca del h2 pero hay otra propiedad que es line-height para la interlinea y te puede servir mejor*/
+    display: flex; /*en realidad, el flex debería aplicarse al padre, o sea, el div donde está contenido*/
+    justify-content: center; 
 }
 
 h2 {
     color: white;
     font-family: "Open Sans", "Kanit medium", "sans-serif";
     font-size: 1.8em;
-    width: 900px;
-    height: 80px;
+    width: 900px; /*misma corrección que h1*/
+    height: 80px; /*idem*/
     display: flex;
     justify-content: center;
 }
@@ -85,10 +85,10 @@ nav {
 
 nav ul {
     list-style: none;
-    width: 900px;
-    height: 80px;
+    width: 900px; /*misma corrección de anchos fijos, acá te convendría utilizar porcentajes*/
+    height: 80px; /*otra dorma de darle altura a los objejos es por medio de los paddings y margins, esta opción está bien pero nos gusta más que el tamaño se adapte al contenido y no que esté fijo*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
 }
 
@@ -134,7 +134,7 @@ p {
 section article {
     font-family: "Open Sans", "Kanit light", "sans-serif";
     font-size: 1em;
-    max-width: 800px;
+    max-width: 800px; /*perfecto*/
 }
 
 .datos_curriculum {
