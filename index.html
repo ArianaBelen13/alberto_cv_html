@@ -9,7 +9,7 @@
 
 <body>
     <header id="cabecera">
-        <div class="titulo_y_subtitulo">
+        <div class="botones_y_titulares">
             <nav class="botonera">
                 <ul>
                     <li><a href="inicio.html" target="_self">Inicio</a></li>
@@ -18,8 +18,10 @@
                     <li><a href="contacto.html" target="_blank">Contacto</a></li>
                 </ul>
             </nav>
+
             <h1>Ariana Belen Alberto</h1>
             <h2>Ilustradora y Licenciada en Diseño y Comunicación Visual<h2>
+                    <img src="img/flecha_cabecera.svg" width="30px" height="30px" alt="Flecha indicadora"></a>
         </div>
     </header>
 
@@ -27,21 +29,22 @@
         <div id="contenedor_curriculum">
             <!--esta section al ser tan grande tal vez funcione mejor como div así podés utilizar section en su interión y no un montón de divs, también por su función de servir como contenedor se le pone como nombre "pepito-container" así tiene un nombre descriptivo. además sería mejor con id ya que es uno solo-->
             <!--RTA alumna: De esta forma estaría bien la división? Los div de la class "estructura" los dejé para diferenciar los bloques. No sé si todavía es demasiado-->
-            <section class="foto_curriculum">
+            <section class="presentacion_curriculum">
                 <img src="img/imagen_curriculum.jpg" width="300px" height="300px"
-                    alt="Acá pondría mi foto si tan solo el navegador la hubiese cargado">
+                    alt="Acá pondría mi foto si tan solo el navegador la hubiese cargado.">
+                <article class="bloque_info" id="perfil_profesional">
+                    <h3>Perfil Profesional</h3>
+                    <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el
+                        diseño de afiches y la ilustración digital es mi especialidad (más especificamente el diseño
+                        de personajes). Siempre busco tener un buen trato con mis compañeros y crear una experiencia
+                        enriquecedora en el ambiente laboral. Muy predispuesta al aprendizaje. Busco un puesto
+                        laboral a largo plazo.
+                    </p>
+                </article>
             </section>
 
             <section class="estructura">
-                <div id="columna_derecha">
-                    <article class="bloque_info" id="perfil_profesional">
-                        <h3>Perfil Profesional</h3>
-                        <p>Diseñadora con 4 años de experiencia en el campo. Ilustradora Freelance. Me enfoco en el
-                            diseño de afiches y la ilustración digital es mi especialidad (más especificamente el diseño
-                            de personajes). Siempre busco tener un buen trato con mis compañeros y crear una experiencia
-                            enriquecedora en el ambiente laboral. Muy predispuesta al aprendizaje. Busco un puesto
-                            laboral a largo plazo.
-                        </p>
+                <div id="columna_izquierda">
                     </article>
 
                     <article class="bloque_info" id="experiencia_laboral">
@@ -76,7 +79,7 @@
                     </article>
                 </div>
 
-                <div id="columna_izquierda">
+                <div id="columna_derecha">
                     <article class="bloque_info" id="idiomas">
                         <h3>Idiomas</h3>
                         <ul>
@@ -135,34 +138,59 @@
                             </li>
                         </ul>
                     </article>
-
-                    <address class="bloque_contacto">
-                        <h4>
-                            <p>Información de Contacto:</p>
-                            <!--Por el momento puse la info de contacto acá, pero tenía pensado que se abra en otra página-->
-                        </h4>
-                        <p>Nombre: Ariana Belen Alberto</p>
-                        <p>Dirección: Ciudad de Buenos Aires, Argentina</p>
-                        <p class="correo">Correo electrónico:
-                            <a href="mailto:aarianabelen76@gmail.com?Subject=Hola,%20me%20interesa%20tu%20perfil."
-                                target="_top">aarianabelen76@gmail.com</a>
-                        </p>
-                        <p class="telefono">Teléfono:
-                            <a href="http://wa.me/+5491165093816" target="_blank">+54 11 6509 3816</a>
-                        </p>
-
-                        <a href="https://www.instagram.com/hail.zerox/" target="_blank">
-                            <img class="logo_instagram" src="img/logo_instagram.png" width="30px" height="30px"
-                                alt="Logo instagram: Hail.Zerox">
-                        </a>
-
-                        <a href="https://twitter.com/HailZero" target="_blank">
-                            <img class="logo_twitter" src="img/logo_twitter.png" width="30px" height="30px"
-                                alt="Logo Twitter: HailZero">
-                        </a>
-                    </address>
                 </div>
             </section>
+
+            <div>
+                <section class="galeria">
+                    <h3>Galería</h3>
+                    <span class="ilustraciones">
+                        <img src="img/ilustracion_dragon_ball.jpg" width="300px" height:"300px"
+                            alt="Ilustración de Goku y Bulma - Dragon Ball">
+                        <img src="img/ilustracion_ezreal_kayn.jpg" width="308px" height:"300px"
+                            alt="Ilustración de Ezreal y Kayn - LOL">
+                        <img src="img/ilustracion_gintama.jpg" width="277px" height:"300px"
+                            alt="Ilustración de Gin, Kagura y Shinpachi - Gintama">
+                        <img src="img/ilustracion_evelynn.jpg" width="212px" height:"300px"
+                            alt="Ilustración de Eveynn - LOL">
+                        <img src="img/ilustracion_mariposas.jpg" width="211px" height:"300px"
+                            alt="Ilustración de oc - OMN">
+                        <img src="img/ilustracion_ezreal.jpg" width="212px" height:"300px"
+                            alt="Ilustración de Ezreal - LOL">
+                    </span>
+
+                </article>
+            </div>
+
+            <address class="bloque_contacto">
+                <h4>
+                    <p>Información de Contacto:</p>
+                </h4>
+                <p>Nombre: Ariana Belen Alberto</p>
+                <p>Dirección: Ciudad de Buenos Aires, Argentina</p>
+                <p class="correo">Correo electrónico:
+                    <a href="mailto:aarianabelen76@gmail.com?Subject=Hola,%20me%20interesa%20tu%20perfil."
+                        target="_top">aarianabelen76@gmail.com</a>
+                </p>
+                <p class="telefono">Teléfono:
+                    <a href="http://wa.me/+5491165093816" target="_blank">+54 11 6509 3816</a>
+                </p>
+
+                <a href="https://www.instagram.com/hail.zerox/" target="_blank">
+                    <img class="logo_instagram" src="img/logo_instagram.svg" width="30px" height="30px"
+                        alt="Logo instagram: Hail.Zerox">
+                </a>
+
+                <a href="https://twitter.com/HailZero" target="_blank">
+                    <img class="logo_twitter" src="img/logo_twitter.svg" width="30px" height="30px"
+                        alt="Logo Twitter: HailZero">
+                </a>
+
+                <a href="https://www.tumblr.com/hailzerox" target="_blank">
+                    <img class="logo_tumblr" src="img/logo_tumblr.svg" width="30px" height="30px"
+                        alt="Logo Twitter: HailZero">
+                </a>
+            </address>
         </div>
     </main>
 
