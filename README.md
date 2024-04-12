@@ -1,4 +1,9 @@
-# Mi Primer TP
-La estructura HTML se logró sin ningún problema, pero tuve complicaciones a la hora de crear el repositorio. El HTML y la carpeta de imagen fueron subidas manualmente.
-Si bien al principio la página no era leída correctamente desde GitHub y solo se quedaba en blanco, un rato después me cargó correctamente. Espero que a ustedes también les funcione.
-También quería consultar si la cantidad de información estaba bien o debía agregar más.
+# TP 1 - Descripción del trabajo realizado.
+En el presente trabajo se realizó un currículum en base a mí experiencia laboral como diseñadora e ilustradora. En un principio fue pensado para ser dividido en distintos archivos HTML, pero por el momento se decidió dejar toda la información en uno solo.
+Se trató de buscar una clara división entre lo que es el Header, el Main y el Footer (incluyendo contenidos internos). Se utilizaron los siguientes recursos visuales: JPG, PNG y SVG.
+Se incorporó un navegador pensado para futuros cambios en caso de desarrollar aún más el curriculum.
+El uso de Flexbox ayudó a ordenar los contenidos aunque al principio hubieron complicaciones para comprenderlo (más especificamente por la cantidad de las etiquetas utilizadas).
+
+Tamaño de pantalla: 1360 x 768
+Editor de código: Visual Studio Code
+
