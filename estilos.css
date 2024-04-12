@@ -109,7 +109,12 @@ nav li {
     background-color: darkgoldenrod;
 }
 
+.botones_y_titulares img {
+    padding: 10px 0 0 0;
+}
+
 .presentacion_curriculum {
+    padding: 30px 0 0 0;
     display: flex;
     flex-direction: row;
 }
@@ -222,8 +227,6 @@ div article {
 .item {
     width: 20px;
     height: 20px;
-    box-sizing: border-box;
-    border-radius: 100%;
 }
 
 .fondo_celeste {
@@ -234,7 +237,7 @@ div article {
     background-color: black;
 }
 
-#estructura_galeria {
+#estructura_portafolio {
     background-image: url(img/fondo_rayado.svg);
     background-color: rgb(133, 26, 88);
     background-repeat: repeat;
@@ -248,14 +251,14 @@ div article {
     align-items: center;
 }
 
-#estructura_galeria h2 {
+#estructura_portafolio h2 {
     color: white;
     background-color: rgb(133, 26, 88);
     font-size: 3em;
     padding: 20px 20px;
 }
 
-.galeria {
+.portafolio {
     max-width: 950px;
     padding: 30px;
     display: flex;
@@ -264,11 +267,11 @@ div article {
     flex-wrap: wrap;
 }
 
-.galeria img {
+.portafolio img {
     padding: 10px 0;
 }
 
-.bloque_contacto {
+#bloque_contacto {
     font-style: normal;
     font-family: "Open Sans", "Kanit light";
     padding: 40px 0 0 0;
@@ -318,4 +321,10 @@ footer {
 
 #parrafo_del_footer {
     padding-bottom: 30px;
+}
+
+.flecha_arriba img {
+    padding: 0 0 30px 0;
+    /*Debido a que la imagen fue rotada el órden de los padding cambia*/
+    transform: rotate(180deg);
 }
