@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 389 300" style="enable-background:new 0 0 389 300;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#2F4F4F;}
 	.st1{fill:#FFFFFF;}
 </style>
-<g id="Capa_1">
+<g id="Capa_1_00000168101893903455482850000015357386973831173560_">
 </g>
-<g id="Capa_2">
+<g id="Capa_2_00000084517365271139596690000002982719386093892532_">
 	<g>
 		<g>
-			<polygon class="st0" points="0,94.13 205.87,300 268.25,300 0,31.75 			"/>
+			<polygon class="st0" points="0,94.1 266.9,300 347.8,300 0,31.8 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="5.1,0 300,294.9 300,235.86 64.14,0 			"/>
+			<polygon class="st0" points="6.6,0 389,294.9 389,235.9 83.2,0 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="0,281.29 18.71,300 77.76,300 0,222.24 			"/>
+			<polygon class="st0" points="0,281.3 24.3,300 100.8,300 0,222.2 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="101,0 300,199 300,140.37 159.63,0 			"/>
+			<polygon class="st0" points="131,0 389,199 389,140.4 207,0 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="0,185.39 114.61,300 169.02,300 0,130.98 			"/>
+			<polygon class="st0" points="0,185.4 148.6,300 219.2,300 0,131 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="300,0 295.71,0 300,4.29 			"/>
+			<polygon class="st0" points="389,0 383.4,0 389,4.3 			"/>
 		</g>
 		<g>
-			<polygon class="st0" points="258.86,0 196.49,0 300,103.51 300,41.14 			"/>
+			<polygon class="st0" points="335.7,0 254.8,0 389,103.5 389,41.1 			"/>
 		</g>
-		<polygon class="st1" points="0,130.98 169.02,300 205.87,300 0,94.13 		"/>
-		<polygon class="st1" points="64.14,0 300,235.86 300,199 101,0 		"/>
-		<polygon class="st1" points="0,0 0,31.75 268.25,300 300,300 300,294.9 5.1,0 		"/>
-		<polygon class="st1" points="159.63,0 300,140.37 300,103.51 196.49,0 		"/>
-		<polygon class="st1" points="300,4.29 295.71,0 258.86,0 300,41.14 		"/>
-		<polygon class="st1" points="0,222.24 77.76,300 114.61,300 0,185.39 		"/>
-		<polygon class="st1" points="0,300 18.71,300 0,281.29 		"/>
+		<polygon class="st1" points="0,131 219.2,300 266.9,300 0,94.1 		"/>
+		<polygon class="st1" points="83.2,0 389,235.9 389,199 131,0 		"/>
+		<polygon class="st1" points="0,0 0,31.8 347.8,300 389,300 389,294.9 6.6,0 		"/>
+		<polygon class="st1" points="207,0 389,140.4 389,103.5 254.8,0 		"/>
+		<polygon class="st1" points="389,4.3 383.4,0 335.7,0 389,41.1 		"/>
+		<polygon class="st1" points="0,222.2 100.8,300 148.6,300 0,185.4 		"/>
+		<polygon class="st1" points="0,300 24.3,300 0,281.3 		"/>
 	</g>
 </g>
 </svg>
