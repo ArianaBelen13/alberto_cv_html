@@ -90,6 +90,7 @@ nav li {
 .botones_y_titulares {
     padding: 0 0 400px 0;
     /*Puse un padding mayor a 100 para no tener que establecer una altura fija del fondo y hacer que así se adapte al contenido. No sé si estaría bien o mejor pongo una determinada altura.*/
+   /*No es una mala solución, pero en vez de poner un padding tan grande, sí se podría solucionar mejor con un height que use la unidad de medida vh, que es una medida más flexible porque se adapta a cada dispositivo como un porcentaje por ej, en lugar de px */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,6 +249,7 @@ div article {
     background-color: rgb(133, 26, 88);
     background-repeat: repeat;
     /*Quería dejarlo en no-repeat pero cuando cambio a los tamaños para celulares la imagen se queda muy arriba y en su mayoría sólo se ve el fondo rosa. No sé si hay alguna forma de solucionarlo.*/
+    /*No veo mucho cambio dejándolo en no-repeat, hay alguna razón en especifico por la que querías ponerlo? Por otra parte, está buenísimo que estés pensando en el responsive y el tamaño en celular, muy bien!! Hay una forma de cambiarlo con algo que se llama Media, pero es algo que vamos a ver más adelante así que no te preocupes ahora mismo por eso, podes dejarlo en no-repeat o así como está. */
     background-size: 100% auto;
     background-attachment: fixed;
     width: 100%;
