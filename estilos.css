@@ -41,7 +41,7 @@ a {
 
 h1 {
     color: white;
-    font-family: "Open Sans", "Kanit bold", "sans-serif";
+    font-family: "Kanit bold", "sans-serif";
     font-size: 4.5em;
     text-transform: uppercase;
     padding: 30px 0;
@@ -50,20 +50,20 @@ h1 {
 
 h2 {
     color: white;
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
     font-size: 1.8em;
 }
 
 h3 {
     color: rgb(133, 26, 88);
-    font-family: "Open Sans", "Kanit extrabold", "sans-serif";
+    font-family: "Kanit extrabold", "sans-serif";
     font-size: 1.3em;
     text-transform: uppercase;
     padding: 15px 0 0 0;
 }
 
 h4 {
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
 }
 
 #cabecera {
@@ -88,12 +88,11 @@ nav li {
 }
 
 .botones_y_titulares {
-    padding: 0 0 400px 0;
-    /*Puse un padding mayor a 100 para no tener que establecer una altura fija del fondo y hacer que así se adapte al contenido. No sé si estaría bien o mejor pongo una determinada altura.*/
-   /*No es una mala solución, pero en vez de poner un padding tan grande, sí se podría solucionar mejor con un height que use la unidad de medida vh, que es una medida más flexible porque se adapta a cada dispositivo como un porcentaje por ej, en lugar de px */
+    height: 80vh;
+    /*Puse una altura en la unidad de vh com me corrigieron. Si bien en distintos monitores se ve bien, cuando lo paso a vista de teléfonos el fondo rosa se extiende en mayor tamaño que el de la imagen al 100%. No sé cómo podría hacer para que se adapte mejor.*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -101,7 +100,7 @@ nav li {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
     font-size: 1.3em;
     text-transform: uppercase;
 }
@@ -140,15 +139,15 @@ main {
 }
 
 .bold_items {
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
 }
 
 p {
-    font-family: "Open Sans", "Kanit light", "sans-serif";
+    font-family: "Kanit light", "sans-serif";
 }
 
 div article {
-    font-family: "Open Sans", "Kanit light", "sans-serif";
+    font-family: "Kanit light", "sans-serif";
     font-size: 1em;
     max-width: 350px;
 }
@@ -203,7 +202,7 @@ div article {
 }
 
 #experiencia_laboral li {
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
 }
 
 #formacion_academica h3:hover {
@@ -211,7 +210,7 @@ div article {
 }
 
 #formacion_academica li {
-    font-family: "Open Sans", "Kanit medium", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
 }
 
 #idiomas h3:hover {
@@ -248,8 +247,6 @@ div article {
     background-image: url(img/fondo_rayado.svg);
     background-color: rgb(133, 26, 88);
     background-repeat: repeat;
-    /*Quería dejarlo en no-repeat pero cuando cambio a los tamaños para celulares la imagen se queda muy arriba y en su mayoría sólo se ve el fondo rosa. No sé si hay alguna forma de solucionarlo.*/
-    /*No veo mucho cambio dejándolo en no-repeat, hay alguna razón en especifico por la que querías ponerlo? Por otra parte, está buenísimo que estés pensando en el responsive y el tamaño en celular, muy bien!! Hay una forma de cambiarlo con algo que se llama Media, pero es algo que vamos a ver más adelante así que no te preocupes ahora mismo por eso, podes dejarlo en no-repeat o así como está. */
     background-size: 100% auto;
     background-attachment: fixed;
     width: 100%;
@@ -275,17 +272,14 @@ div article {
     flex-wrap: wrap;
 }
 
-.portafolio img :hover:before {
-    cursor: pointer;
-}
-
 .portafolio img {
     padding: 10px 0;
+    /*Tenía pensado poner una animación al pasar el cursor sobre las imágenes pero no encontraba tutoriales que me funcionen. Sé que todavía no lo vamos a ver pero me gustaría saber cuál forma sería la correcta.*/
 }
 
 #bloque_contacto {
     font-style: normal;
-    font-family: "Open Sans", "Kanit light";
+    font-family: "Kanit light", "sans-serif";
     padding: 40px 0 0 0;
 }
 
@@ -322,7 +316,7 @@ div article {
 footer {
     background-color: rgb(133, 26, 88);
     color: white;
-    font-family: "Open Sans", "Kanit light", "sans-serif";
+    font-family: "Kanit light", "sans-serif";
     text-decoration: none;
     padding: 30px 0 80px 0;
     display: flex;
