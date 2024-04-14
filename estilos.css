@@ -89,7 +89,7 @@ nav li {
 
 .botones_y_titulares {
     height: 80vh;
-    /*Puse una altura en la unidad de vh com me corrigieron. Si bien en distintos monitores se ve bien, cuando lo paso a vista de teléfonos el fondo rosa se extiende en mayor tamaño que el de la imagen al 100%. No sé cómo podría hacer para que se adapte mejor.*/
+    /*Puse una altura en la unidad de vh como me corrigieron. Si bien en distintos monitores se ve bien, cuando lo paso a vista de teléfonos el fondo rosa se extiende en mayor tamaño que el de la imagen al 100%. No sé cómo podría hacer para que se adapte mejor.*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
