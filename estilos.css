@@ -88,8 +88,8 @@ nav li {
 }
 
 .botones_y_titulares {
-    height: 80vh;
-    /*Puse una altura en la unidad de vh como me corrigieron. Si bien en distintos monitores se ve bien, cuando lo paso a vista de teléfonos el fondo rosa se extiende en mayor tamaño que el de la imagen al 100%. No sé cómo podría hacer para que se adapte mejor.*/
+    padding: 0 0 450px 0;
+    /*Puse un padding en 450px ya que al cambiar la vista para celulares era la mejor forma en que la imagen de fondo se adapte al contenido y no se vea el color rosa de fondo. Probé anteriormente con un height en distintas unidades pero no funcionó.*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -274,7 +274,12 @@ div article {
 
 .portafolio img {
     padding: 10px 0;
-    /*Tenía pensado poner una animación al pasar el cursor sobre las imágenes pero no encontraba tutoriales que me funcionen. Sé que todavía no lo vamos a ver pero me gustaría saber cuál forma sería la correcta.*/
+    border-radius: 30px;
+    transition: all 400ms ease;
+}
+
+.portafolio img:hover {
+    transform: scale(1.1);
 }
 
 #bloque_contacto {
