@@ -4,6 +4,8 @@
 <p>Se incorporó un navegador interno para ir directamente a la sección deseada de la página.</p>
 <p></p>El uso de Flexbox ayudó a ordenar los contenidos. Si bien al principio hubieron complicaciones para comprenderlo, se logró utilizar de la forma deseada.</p>
 
+<p>Nota: En la parte del header se utilizó un padding mayor a 100px. Fue consultado con los profesores ya que las soluciones propuestas no estaban funcionando y se acordó que podía seguir usándolo.</p>
+
 <p>Tamaño de pantalla: 1360 x 768</p>
 <p>Editor de código: Visual Studio Code</p>
 
