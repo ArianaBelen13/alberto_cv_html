@@ -67,18 +67,24 @@ p {
     font-family: "Kanit light", "sans-serif";
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #cabecera {
-    background-image: url(img/fondo_ilustracion2.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    background-size: 100% auto;
+    font-size: 0.9em;
 }
 
 nav ul {
     list-style: none;
     width: 100%;
-    padding: 25px 0px 25px 0;
+    padding: 25px 0px;
     display: flex;
     flex-direction: row;
 }
@@ -88,9 +94,6 @@ nav li {
 }
 
 .contenedor {
-    /*padding: 0 0 450px 0;
-    Puse un padding en 450px ya que al cambiar la vista para celulares era la mejor forma en que la imagen de fondo se adapte al contenido y no se vea el color rosa de fondo. Probé anteriormente con un height en distintas unidades pero no funcionó.*/
-    background-color: rgba(0, 0, 0, 0.70);
     padding: 0 100px;
     display: flex;
     justify-content: space-between;
@@ -140,7 +143,7 @@ nav li {
 }
 
 .titulares {
-    padding: 20px 0;
+    padding: 100px 0 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,6 +159,7 @@ nav li {
 
 #bienvenida {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(133, 26, 88, 0.50) 100%), #000;
+    width: 100%;
     margin: 0px auto;
     padding: 50px 0;
     display: flex;
@@ -202,6 +206,11 @@ nav li {
     transform: scale(1.1);
 }
 
+
+/*SOBRE MI*/
+.presentacion_curriculum img {
+    border-radius: 300px;
+}
 
 .bold_items {
     font-family: "Kanit medium", "sans-serif";
@@ -286,8 +295,9 @@ div article {
     width: 20px;
     height: 20px;
 }
+/*SOBRE MI*/
 
-
+/*TRABAJOS*/
 #estructura_portafolio {
     background-image: url(img/fondo_rayado.svg);
     background-color: rgb(133, 26, 88);
@@ -317,14 +327,25 @@ div article {
     flex-wrap: wrap;
 }
 
-.portafolio img {
+img {
     padding: 10px 0;
-    border-radius: 30px;
     transition: all 400ms ease;
 }
 
-.portafolio img:hover {
+img:hover {
     transform: scale(1.1);
+}
+/*TRABAJOS*/
+
+/*CONTACTO*/
+Form {
+    width: 100%;
+    height: auto;
+
+}
+
+input {
+    border-radius: darkgoldenrod;
 }
 
 .informacion_contacto {
@@ -382,3 +403,4 @@ footer {
     flex-wrap: nowrap;
     gap: 70px;
 }
+/*CONTACTO*/
