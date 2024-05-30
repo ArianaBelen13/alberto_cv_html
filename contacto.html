@@ -27,29 +27,57 @@
     </header>
     <!--HEADER-->
 
+    <!--MAIN-->
     <main>
-        <section>
-            <div>
-                <h1>Contacto</h1>
-                <form method="post" action="" target="_blank" enctype="text/plain">
-                    <label for="Nombre">Nombre</label>
-                    <input type="text" name="Nombre" id="Nombre" maxlength="30" placeholder="Mi nombre es..." required>
+        <section id="estructura_contacto">
+            <h1>Contacto</h1>
+            <article class="contacto">
+                <form method="post" action="mailto:aarianabelen76@gmail.com?subject=Email enviado desde el formulario"
+                    target="_blank" enctype="text/plain">
+                    <div class="campos_marcar">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="Nombre" id="Nombre" maxlength="30" placeholder="Mi nombre es..."
+                            required>
 
-                    <label for="Correo">Correo</label>
-                    <input type="email" name="Correo" id="Correo" placeholder="xxxxxxxxxx@gmail.com" required>
+                        <label for="Correo">Correo</label>
+                        <input type="email" name="Correo" id="Correo" placeholder="xxxxxxxxxx@gmail.com" required>
 
-                    <label for="Teléfono">Teléfono</label>
-                    <input type="tel" name="Teléfono" id="Telefono" placeholder="(000)00000000" required>
+                        <label for="Teléfono">Teléfono</label>
+                        <input type="tel" name="Teléfono" id="Telefono" placeholder="(000)00000000" required>
+                    </div>
 
-                    <label>Mensaje</label>
-                    <textarea name="Mensaje" id="Mensaje"></textarea>
+                    <div class="campos_marcar">
+                        <p>Tipo de trabajo</p>
+                        <label>Ilustración para videojuegos <input type="radio" name="Tipo de trabajo"
+                                value="Ilustración para videojuegos" id="videojuegos"></label>
 
-                    <input type="submit" value="Enviar">
+                        <label>Ilustración de portadas <input type="radio" name="Tipo de trabajo"
+                                value="Ilustración de portadas" id="portadas"></label>
+
+                        <label>Ilustración infantil <input type="radio" name="Tipo de trabajo"
+                                value="Ilustración infantil" id="infantil"></label>
+
+                        <label>Ilustración de personajes <input type="radio" name="Tipo de trabajo"
+                                value="Ilustración de personajes"></label>
+
+                        <label>Concept art <input type="radio" name="Tipo de trabajo" value="Concept art"></label>
+
+                        <label>Comic/Manga <input type="radio" name="Tipo de trabajo" value="Comic/Manga"></label>
+                    </div>
+
+                    <div class="mensaje_enviar">
+                        <label>Mensaje</label>
+                        <textarea name="Mensaje" id="Mensaje"
+                            placeholder="¡Hola! Nos interesa mucho tu estilo..."></textarea>
+
+                        <input type="submit" value="Enviar" formenctype="text/plain">
+                    </div>
                 </form>
-            </div>
+            </article>
 
         </section>
     </main>
+    <!--MAIN-->
 
     <!--FOOTER-->
     <footer>

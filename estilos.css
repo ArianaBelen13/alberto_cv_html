@@ -67,13 +67,7 @@ p {
     font-family: "Kanit light", "sans-serif";
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
+/* NAVEGADOR */
 #cabecera {
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
@@ -118,16 +112,7 @@ nav li {
     background-color: darkgoldenrod;
 }
 
-.botones_y_titulares img {
-    padding: 10px 0 0 0;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 8px;
-}
-
+/* INICIO */
 .titulares_fondo {
     background-image: url(img/fondo_ilustracion2.png);
     background-repeat: no-repeat;
@@ -138,7 +123,7 @@ nav li {
 }
 
 .transparencia {
-    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.50);
 }
 
@@ -177,35 +162,28 @@ nav li {
     align-items: center;
     gap: 15px;
     text-align: center;
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid white;
 }
 
 .trabajos_destacados {
     padding: 30px 0 0 0;
     color: white;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30PX;
 }
 
 .ilustraciones_destacadas {
-    padding: 20px 0 0 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 auto;
+    width: 820px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
 }
-
-.ilustraciones_destacadas img {
-    padding: 10px;
-    transition: all 400ms ease;
-}
-
-.ilustraciones_destacadas img:hover {
-    transform: scale(1.1);
-}
-
 
 /*SOBRE MI*/
 .presentacion_curriculum img {
@@ -223,9 +201,13 @@ div article {
 }
 
 #contenedor_curriculum {
+    background-color: darkgoldenrod;
+    color: rgb(133, 26, 88);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 100px 0 0 0;
 
     ol {
         list-style: disc;
@@ -237,10 +219,27 @@ div article {
     }
 }
 
-.estructura_columnas {
-    padding: 30px 0 90px 0;
+.presentacion_curriculum {
+    width: 100%;
+    padding: 30px 0 100px 0;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    p {
+        color: black;
+    }
+}
+
+.estructura_columnas {
+    padding: 50px 0 100px 0;
+    color: white;
+    background-color: rgb(133, 26, 88);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 
     ul {
         padding-left: 20px;
@@ -251,8 +250,10 @@ div article {
     }
 }
 
-#columna_derecha {
-    padding: 0 0 0 20px;
+#columna_izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .estructura article {
@@ -260,94 +261,142 @@ div article {
 }
 
 #perfil_profesional h3:hover {
-    color: darkslategrey;
-}
-
-#perfil_profesional {
-    padding: 0 0 0 40px;
+    color: white;
 }
 
 #experiencia_laboral h3:hover {
-    color: darkslategrey;
-}
-
-#experiencia_laboral li {
-    font-family: "Kanit medium", "sans-serif";
+    color: darkgoldenrod;
 }
 
 #formacion_academica h3:hover {
-    color: darkslategrey;
-}
-
-#formacion_academica li {
-    font-family: "Kanit medium", "sans-serif";
+    color: darkgoldenrod;
 }
 
 #idiomas h3:hover {
-    color: darkslategrey;
+    color: darkgoldenrod;
 }
 
 #programas h3:hover {
-    color: darkslategrey;
+    color: darkgoldenrod;
 }
 
 .item {
     width: 20px;
     height: 20px;
 }
-/*SOBRE MI*/
 
 /*TRABAJOS*/
-#estructura_portafolio {
-    background-image: url(img/fondo_rayado.svg);
-    background-color: rgb(133, 26, 88);
-    background-repeat: repeat;
-    background-size: 100% auto;
-    background-attachment: fixed;
-    width: 100%;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#estructura_portafolio h2 {
+#estructura_trabajos {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(184, 134, 11, 0.50) 100%), #000;
     color: white;
-    background-color: rgb(133, 26, 88);
-    font-size: 3em;
-    padding: 20px 20px;
+    width: 100%;
+    padding: 100px 0;
 }
 
-.portafolio {
-    max-width: 950px;
-    padding: 30px 0 60px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.estructura_galeria {
+    display: grid;
+    text-align: center;
+    gap: 30px;
+}
+
+.grid_imagenes {
+    margin: 0 auto;
+    width: 820px;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
 }
 
 img {
-    padding: 10px 0;
     transition: all 400ms ease;
 }
 
 img:hover {
     transform: scale(1.1);
 }
-/*TRABAJOS*/
 
 /*CONTACTO*/
-Form {
+/*Estoy teniendo problemas con el contacto y la organización de elementos. No sé por qué los anchos de columnas, label, imput, etc, no se ajustan bien. Y cuando uso width:100% se sale de la pantalla el ancho de los imput*/
+#estructura_contacto {
+    font-family: "Kanit light", "sans-serif";
+    background-color: rgb(133, 26, 88);
+    color: white;
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contacto {
+    font-family: "Kanit medium", "sans-serif";
+    ;
+    width: 800px;
+    background-color: darkgoldenrod;
+    padding: 48px 30px;
+    box-shadow: -8px 10px 4px 0px rgba(0, 0, 0, 0.30);
+}
+
+form {
+    color: rgb(133, 26, 88);
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 100px;
+}
 
+.campos_marcar {
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 1.0em;
+    height: 30px;
 }
 
 input {
-    border-radius: darkgoldenrod;
+    font-size: 1.0em;
+    width: 100%;
+    padding: 10px 24px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: rgb(133, 26, 88);
+    border: 3px solid rgb(133, 26, 88);
 }
 
+input [type=radio] {
+    width: 100%;
+    color: rgb(133, 26, 88);
+}
+
+textarea {
+    font-size: 1.0em;
+    width: 745px;
+    height: 185px;
+    padding: 10px 24px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    color: rgb(133, 26, 88);
+    border: 3px solid rgb(133, 26, 88);
+}
+
+/*Quería que el tamaño de los campos se ajuste al del fondo amarillo pero respetando los paddings, pero solo pude ajustarlo a ojo ponendo un ancho fijo.*/
+
+.boton_enviar {
+    width: 100%;
+    background-color: rgb(133, 26, 88);
+}
+
+/* FOOTER */
 .informacion_contacto {
     font-style: normal;
 }
@@ -403,4 +452,9 @@ footer {
     flex-wrap: nowrap;
     gap: 70px;
 }
-/*CONTACTO*/
+
+.redes {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+}
