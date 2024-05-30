@@ -317,7 +317,8 @@ img:hover {
 }
 
 /*CONTACTO*/
-/*Estoy teniendo problemas con el contacto y la organización de elementos. No sé por qué los anchos de columnas, label, imput, etc, no se ajustan bien. Y cuando uso width:100% se sale de la pantalla el ancho de los imput*/
+/*Estoy teniendo problemas con el contacto y la organización de elementos. No sé por qué los anchos de columnas, label, imput, etc, no se ajustan bien. Y cuando uso width:100% se sale de la pantalla el ancho de los imput.
+Otro problema que tengo es que en el tp individual veo algo grandes los tamaños cuando los paso a 1920, pero en el tp grupal (con tamaños similares de textos y demas) se ve más pequeño y con el tamaño deseado en 1920 y me confunde.*/
 #estructura_contacto {
     font-family: "Kanit light", "sans-serif";
     background-color: rgb(133, 26, 88);
