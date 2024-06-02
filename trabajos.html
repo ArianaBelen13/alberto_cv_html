@@ -7,6 +7,17 @@
     <title>CV - Alberto Ariana Belen</title>
     <link href="estilos.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/svg+xml" href="img/svg/favicon.svg">
+    <script>
+        function cambiarDisplay(visibilidadNueva) {
+            document.getElementById("galeria").style.display = visibilidadNueva
+        }
+        function mostrarGaleria() {
+            cambiarDisplay('flex')
+        }
+        function ocultarGaleria() {
+            cambiarDisplay('none')
+        }
+    </script>
 </head>
 
 <body>
@@ -33,47 +44,151 @@
         <section class="estructura_galeria">
             <h1>Trabajos</h1>
             <article class="grid_imagenes">
-                <a>
+                <a class="imagenes" href="#foto_1">
                     <img src="img/thumbnail/dragon_ball_thumbnail.png" alt="Ilustración de Goku y Bulma - Dragon Ball"
                         width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_2">
                     <img src="img/thumbnail/ezreal_kayn_thumbnail.png" alt="Ilustración Ezreal y Kayn - LOL"
                         width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_3">
                     <img src="img/thumbnail/evelynn_thumbnail.png" alt="Ilustración de Evelynn - LOL" width="500px"
                         height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_4">
                     <img src="img/thumbnail/gintama_thumbnail.png"
                         alt="Ilustración de Gin, Kagura y Shinpachi - Gintama" width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_5">
                     <img src="img/thumbnail/dimitri_byleth_thumbnail.png"
                         alt="Ilustración Dimitri y Byleth - Fire Emblem: Three Houses" width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_6">
                     <img src="img/thumbnail/ezreal_thumbnail.png" alt="Ilustración de Ezreal - LOL" width="500px"
                         height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_7">
                     <img src="img/thumbnail/hazbin_hotel_thumbnail.png"
                         alt="Ilustración de Alastor y Charlie - Hazbin Hotel" width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
 
-                <a>
+                <a class="imagenes" href="#foto_8">
                     <img src="img/thumbnail/mariposas_thumbnail.png" alt="Ilustración de Lamb y Leviathan - OM"
                         width="500px" height="500px" />
+
+                    <div>
+                        <p>Ver más</p>
+                    </div>
                 </a>
             </article>
         </section>
+
+        <!--Comienzo de galería oculta-->
+        <section id="galeria" style="display: none;">
+            <ul id="galeria_oculta">
+                <li class="fraccion_galeria" id="foto_1">
+                    <a href="#" class="primer_ultima_flecha"><img src="img/svg/back.svg" width="50px" height="50px"
+                            alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_2"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_2">
+                    <a href="#foto_1"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_3"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_3">
+                    <a href="#foto_2"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_4"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_4">
+                    <a href="#foto_3"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_5"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_5">
+                    <a href="#foto_4"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_6"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_6">
+                    <a href="#foto_5"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_7"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_7">
+                    <a href="#foto_6"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#foto_8"><img src="img/svg/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+                </li>
+
+                <li class="fraccion_galeria" id="foto_8">
+                    <a href="#foto_7"><img src="img/svg/back.svg" width="50px" height="50px" alt="Anterior"></a>
+
+                    <img class="close" src="img/svg/close.svg" alt="Cerrar" width="50px" height="50px">
+
+                    <a href="#" class="primer_ultima_flecha"><img src="img/svg/next.svg" width="50px" height="50px"
+                            alt="Siguiente"></a>
+                </li>
+            </ul>
+        </section>
+
     </main>
     <!--MAIN-->
 
