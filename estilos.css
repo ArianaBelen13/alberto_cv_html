@@ -63,6 +63,15 @@ p {
     font-size: 1.5em;
 }
 
+img {
+    transition: all 400ms ease;
+}
+
+img:hover {
+
+    transform: scale(1.1);
+}
+
 /* NAVEGADOR */
 #cabecera {
     position: fixed;
@@ -304,7 +313,7 @@ div article {
 }
 
 /*TRABAJOS*/
-#estructura_trabajos {
+#trabajos {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(184, 134, 11, 0.50) 100%), #000;
     color: white;
     width: 100%;
@@ -326,19 +335,9 @@ div article {
     justify-content: center;
 }
 
-img {
-    transition: all 400ms ease;
-}
-
-img:hover {
-
-    transform: scale(1.1);
-}
-
 /*CONTACTO*/
-/*Estoy teniendo problemas con el contacto y la organización de elementos. No sé por qué los anchos de columnas, label, imput, etc, no se ajustan bien. Y cuando uso width:100% se sale de la pantalla el ancho de los imput.*/
 #estructura_contacto {
-    font-family: "Kanit light", "sans-serif";
+    font-family: "Kanit medium", "sans-serif";
     background-color: rgb(133, 26, 88);
     color: white;
     padding: 160px 0;
@@ -350,68 +349,101 @@ img:hover {
 }
 
 .contacto {
-    font-family: "Kanit medium", "sans-serif";
-    width: 1000px;
     background-color: darkgoldenrod;
-    padding: 48px 30px;
+    padding: 60px 80px;
     box-shadow: -8px 10px 4px 0px rgba(0, 0, 0, 0.30);
 }
 
 form {
     color: rgb(133, 26, 88);
-    width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
+    gap: 40px;
+}
+
+#dos_columnas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
 }
 
 .campos_marcar {
-    width: 350px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    p {
+        font-family: "Kanit medium", "sans-serif";
+        font-size: 1.0em;
+    }
 }
 
 label {
-    font-size: 1.0em;
     height: 30px;
 }
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    font-family: "Kanit light", "sans-serif";
     font-size: 1.0em;
-    width: 100%;
     padding: 10px 24px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 5px 0 20px 0;
     color: rgb(133, 26, 88);
     border: 3px solid rgb(133, 26, 88);
 }
 
-input [type=radio] {
-    width: 100%;
-    color: rgb(133, 26, 88);
+#marcar {
+    font-family: "Kanit light", "sans-serif";
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+input[type="radio"]+label::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-flex;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: rgb(133, 26, 88);
 }
 
 textarea {
+    font-family: "Kanit light", "sans-serif";
     font-size: 1.0em;
     width: 745px;
     height: 185px;
     padding: 10px 24px;
-    margin-top: 8px;
-    margin-bottom: 30px;
+    margin: 8px 0 30px 0;
     color: rgb(133, 26, 88);
     border: 3px solid rgb(133, 26, 88);
 }
 
-/*Quería que el tamaño de los campos se ajuste al del fondo amarillo pero respetando los paddings, pero solo pude ajustarlo a ojo ponendo un ancho fijo.*/
+.mensaje_enviar {
+    display: flex;
+    flex-direction: column;
+}
 
 .boton_enviar {
-    width: 100%;
+    font-family: "Kanit light", "sans-serif";
+    font-size: 1.0em;
+    height: 50px;
     background-color: rgb(133, 26, 88);
+    color: white;
+    border: 3px solid rgb(133, 26, 88);
 }
 
 /* FOOTER */
