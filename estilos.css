@@ -347,7 +347,9 @@ div article {
     transform: scale(1.1);
 }
 
-/*.imagenes p {
+
+/* Texto sobre imagen */
+.imagenes p {
     font-family: "Kanit medium", sans-serif;
     font-size: 4.5em;
 }
@@ -367,8 +369,8 @@ div article {
 .imagenes div:hover {
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
-}*/
-
+}
+/* Texto sobre imagen */
 
 
 #galeria {
@@ -412,7 +414,7 @@ div article {
     right: 2%;
 }
 
-#fondo-galeria {
+#fondo_galeria {
 	background-color: black;
 	opacity: 0.9;
 	position: fixed;
@@ -429,35 +431,32 @@ div article {
 }
 
 #foto_2 {
-    background-image: url("img/foto-2.jpg")
+    background-image: url("img/ilustraciones/foto_2.jpg")
 }
 
 #foto_3 {
-    background-image: url("img/foto-3.jpg");
+    background-image: url("img/ilustraciones/foto_3.jpg");
 }
 
 #foto_4 {
-    background-image: url("img/foto-3.jpg");
+    background-image: url("img/ilustraciones/foto_4.jpg");
 }
 
-#foto_4 {
-    background-image: url("img/foto-3.jpg");
+#foto_5 {
+    background-image: url("img/ilustraciones/foto_5.jpg");
 }
 
 #foto_6 {
-    background-image: url("img/foto-3.jpg");
+    background-image: url("img/ilustraciones/foto_6.jpg");
 }
 
 #foto_7 {
-    background-image: url("img/foto-3.jpg");
+    background-image: url("img/ilustraciones/foto_7.jpg");
 }
 
 #foto_8 {
-    background-image: url("img/foto-3.jpg");
+    background-image: url("img/ilustraciones/foto_8.jpg");
 }
-
-
-
 
 /*CONTACTO*/
 #estructura_contacto {
