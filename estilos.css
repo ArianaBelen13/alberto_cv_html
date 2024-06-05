@@ -58,6 +58,11 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    font-family: "Kanit medium", "sans-serif";
+    font-size: 4em;
+}
+
 p {
     font-family: "Kanit light", "sans-serif";
     font-size: 1.5em;
@@ -126,12 +131,14 @@ nav li {
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
+    height: 100vh;
     background-size: 100% auto;
     color: white;
 }
 
 .transparencia {
     width: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.50);
     display: flex;
     flex-direction: column;
@@ -150,8 +157,17 @@ nav li {
 .flecha_bajada {
     display: flex;
     justify-content: center;
-    padding: 0 0 450px 0;
-    /*Puse un padding en 450px ya que era la única forma que encontré que la imagen de fondo se adapte al contenido y no se vea el color de fondo. Probé anteriormente con un height en distintas unidades pero no funcionó.*/
+    animation-name: flecha_movimiento;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flecha_movimiento {
+    100% {
+        transform: translateY(30px);
+    }
 }
 
 #bienvenida {
@@ -166,7 +182,7 @@ nav li {
 }
 
 .presentacion {
-    padding: 0 0 20px 0;
+    padding: 0 0 30px 0;
     max-width: 900px;
     color: white;
     display: flex;
@@ -204,7 +220,7 @@ nav li {
     border-radius: 300px;
 }
 
-div article {
+#perfil_profesional {
     max-width: 510px;
 }
 
@@ -223,12 +239,11 @@ div article {
 
     ol {
         list-style: disc;
-        padding-left: 20px;
     }
 
     li {
         padding-left: 0px;
-
+        list-style-position: inside;
     }
 }
 
@@ -255,7 +270,7 @@ div article {
     gap: 40px;
 
     ul {
-        padding-left: 20px;
+        list-style-position: inside;
     }
 }
 
@@ -299,12 +314,6 @@ div article {
     color: darkgoldenrod;
 }
 
-#idiomas {
-    font-family: "Kanit light", sans-serif;
-    font-size: 1.5em;
-
-}
-
 .medidor_de_progreso {
     padding: 30px 0;
     list-style: none;
@@ -321,9 +330,14 @@ div article {
     color: white;
     width: 100%;
     padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
 }
 
 .estructura_galeria {
+    text-decoration: none;
     display: grid;
     text-align: center;
     gap: 60px;
@@ -341,22 +355,25 @@ div article {
 .imagenes {
     position: relative;
     transition: all 400ms ease;
+    color: white;
 }
 
 .imagenes:hover {
     transform: scale(1.1);
+    color: white;
 }
-
 
 /* Texto sobre imagen */
 .imagenes p {
     font-family: "Kanit medium", sans-serif;
-    font-size: 4.5em;
+    font-size: 2.5em;
+    line-height: 45px;
+    max-width: 380px;
 }
 
 .imagenes div {
     width: 100%;
-    height: 100%;
+    height: 500px;
     top: 0;
     left: 0;
     position: absolute;
@@ -370,6 +387,7 @@ div article {
     background: rgba(0, 0, 0, 0.5);
     opacity: 1;
 }
+
 /* Texto sobre imagen */
 
 
@@ -415,13 +433,13 @@ div article {
 }
 
 #fondo_galeria {
-	background-color: black;
-	opacity: 0.9;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 0;
+    background-color: black;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
 }
 
 /*------IDS CON LAS IMÁGENES DE LA GALERÍA-------*/
@@ -456,6 +474,18 @@ div article {
 
 #foto_8 {
     background-image: url("img/ilustraciones/foto_8.jpg");
+}
+
+.video_tumblr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /*CONTACTO*/
