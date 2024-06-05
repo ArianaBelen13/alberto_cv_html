@@ -11,6 +11,10 @@ a {
     cursor: url(img/cursor_pointer.png), auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Kanit bold";
     src: url("fonts/Kanit-Bold.ttf") format('truetype');
@@ -164,6 +168,10 @@ nav li {
 }
 
 @keyframes flecha_movimiento {
+    0% {
+        transform: translateY(-20px);
+    }
+
     100% {
         transform: translateY(30px);
     }
@@ -225,6 +233,7 @@ nav li {
 
 .bold_items {
     font-family: "Kanit medium", "sans-serif";
+    font-size: 1.5em;
 }
 
 #contenedor_curriculum {
@@ -251,13 +260,13 @@ nav li {
 }
 
 .estructura_columnas {
-    padding: 50px 0 100px 0;
+
+    padding: 70px 0 100px 0;
     color: white;
     background-color: rgb(133, 26, 88);
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 40px;
 
     ol {
         list-style: disc;
@@ -272,7 +281,15 @@ nav li {
     width: 480px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
+}
+
+.space_columnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 #columna_derecha {
@@ -283,6 +300,18 @@ nav li {
         font-family: "Kanit medium", sans-serif;
         font-size: 1.5em;
     }
+}
+
+.gap_derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#columna_derecha .bloque_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .estructura article {
@@ -301,6 +330,13 @@ nav li {
     color: darkgoldenrod;
 }
 
+#idiomas {
+    li {
+        font-family: "Kanit light", "sans-serif";
+        font-size: 1.5em;
+    }
+}
+
 #idiomas h3:hover {
     color: darkgoldenrod;
 }
@@ -310,11 +346,10 @@ nav li {
 }
 
 .medidor_de_progreso {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 18px;
 }
 
@@ -417,7 +452,8 @@ nav li {
     visibility: hidden;
 }
 
-.flecha, .close {
+.flecha,
+.close {
     mix-blend-mode: plus-lighter;
 }
 
@@ -462,7 +498,8 @@ nav li {
 }
 
 .video_tumblr {
-    background-color: darkgoldenrod;
+    background-color: rgb(133, 26, 88);
+    background-repeat: no-repeat;
     padding: 110px 0;
     display: flex;
     flex-direction: row;
@@ -472,12 +509,11 @@ nav li {
 
 .texto_video {
     width: 480px;
-    color: rgb(133, 26, 88);
+    color: white;
 }
 
-.tumblr-post {
-    background-color: rgb(133, 26, 88);
-    border: 30px rgb(133, 26, 88);
+.tamaño_video {
+    max-width: 600px;
 }
 
 /*------CONTACTO------*/
@@ -654,4 +690,196 @@ footer {
     display: flex;
     flex-direction: row-reverse;
     gap: 8px;
+}
+
+
+
+
+
+
+/*------MEDIA------*/
+@media screen and (max-width: 1200px) {
+
+    /*------NAVEGADOR------*/
+    #cabecera {
+        max-width: 600px;
+        z-index: 2;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        list-style: none;
+        width: 100%;
+        padding: 25px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        padding: 0 30px;
+    }
+
+    .contenedor {
+        padding: 0 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 107px;
+    }
+
+    .botonera a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+        font-family: "Kanit medium", "sans-serif";
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+
+    .botonera a:hover {
+        color: white;
+        background-color: black;
+    }
+
+    .botonera a:active {
+        color: black;
+        background-color: darkgoldenrod;
+    }
+
+    /*------INICIO------*/
+    .titulares_fondo {
+        background-color: rgb(133, 26, 88);
+        background-image: url(img/fondo_ilustracion_600.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        max-height: 600px;
+        background-size: 100% auto;
+        color: white;
+    }
+
+    .transparencia {
+        width: 100%;
+        max-height: 600px;
+        background-color: rgba(0, 0, 0, 0.50);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .titulares {
+        padding: 130px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        h1 {
+            font-size: 5em;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+
+    .flecha_bajada {
+        display: flex;
+        justify-content: center;
+        animation-name: flecha_movimiento;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes flecha_movimiento {
+        0% {
+            transform: translateY(-20px);
+        }
+
+        100% {
+            transform: translateY(30px);
+        }
+    }
+
+    #bienvenida {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(133, 26, 88, 0.50) 100%), #000;
+        width: 100%;
+        margin: 0px auto;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentacion {
+        padding: 0 16px;
+        max-width: 900px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        border-bottom: 3px solid white;
+    }
+
+    .trabajos_destacados {
+        padding: 0 16PX;
+        color: white;
+        display: grid;
+        grid-gap: 32px;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .ilustraciones_destacadas {
+        margin: 0 auto;
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+        grid-gap: 32px;
+        justify-items: center;
+        justify-content: center;
+    }
+
+
+
+    /*------FOOTER------*/
+
+    footer {
+        max-width: 600px;
+        background-color: black;
+        color: white;
+        font-family: "Kanit light", "sans-serif";
+        text-decoration: none;
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contenedor_footer {
+        padding: 0 100px;
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 70px;
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8px;
+    }
 }
