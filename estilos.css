@@ -160,16 +160,12 @@ nav li {
 .flecha_bajada {
     display: flex;
     justify-content: center;
-    animation-name: flecha_movimiento;
-    animation-duration: 1s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: flecha_movimiento 1s normal infinite ease-in-out;
 }
 
 @keyframes flecha_movimiento {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-15px);
     }
 
     100% {
@@ -222,6 +218,24 @@ nav li {
     justify-content: center;
 }
 
+.boton_ver_mas {
+    background-color: black;
+    padding: 15px;
+    box-shadow: -8px 10px 4px 0px rgba(0, 0, 0, 0.30);
+    transition: all 400ms ease;
+}
+
+.boton_ver_mas:hover {
+    transform: scale(1.1);
+}
+
+.boton_ver_mas a {
+    font-family: "Kanit medium", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5em;
+}
+
 /*------SOBRE MI------*/
 .presentacion_curriculum img {
     border-radius: 300px;
@@ -260,7 +274,6 @@ nav li {
 }
 
 .estructura_columnas {
-
     padding: 70px 0 100px 0;
     color: white;
     background-color: rgb(133, 26, 88);
@@ -355,7 +368,36 @@ nav li {
 
 /*------TRABAJOS------*/
 #trabajos {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(133, 26, 88, 0.50) 100%), #000;
+    background-size: 500%;
+    background-image: linear-gradient(20deg, black, rgb(133, 26, 88), darkgoldenrod);
+    animation-name: degradado;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    /*animation: degradado 12s ease-in infinite alternate;*/
+}
+
+@keyframes degradado {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.estructura_galeria {
+    display: grid;
+    text-align: center;
+    padding: 0 0 100px 0;
+}
+
+.estructura_galeria article {
     color: white;
     width: 100%;
     padding: 160px 0 0 0;
@@ -363,14 +405,6 @@ nav li {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-}
-
-.estructura_galeria {
-    text-decoration: none;
-    display: grid;
-    text-align: center;
-    gap: 60px;
-    padding: 0 0 60px 0;
 }
 
 .grid_imagenes {
@@ -498,7 +532,7 @@ nav li {
 }
 
 .video_tumblr {
-    background-color: rgb(133, 26, 88);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(133, 26, 88, 0.50) 100%), #000;
     background-repeat: no-repeat;
     padding: 110px 0;
     display: flex;
@@ -703,9 +737,6 @@ footer {
     /*------NAVEGADOR------*/
     #cabecera {
         max-width: 600px;
-        z-index: 2;
-        position: fixed;
-        background: rgba(0, 0, 0, 0.5);
         width: 100%;
         font-size: 0.9em;
     }
@@ -713,30 +744,17 @@ footer {
     nav ul {
         list-style: none;
         width: 100%;
-        padding: 25px 0px;
         display: flex;
         flex-direction: column;
-    }
-
-    nav li {
-        padding: 0 30px;
     }
 
     .contenedor {
         padding: 0 16px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: 107px;
-    }
-
-    .botonera a {
-        text-decoration: none;
-        color: white;
-        padding: 10px 15px;
-        font-family: "Kanit medium", "sans-serif";
-        text-transform: uppercase;
-        font-size: 1.2em;
+        height: 290px;
     }
 
     .botonera a:hover {
@@ -751,19 +769,17 @@ footer {
 
     /*------INICIO------*/
     .titulares_fondo {
-        background-color: rgb(133, 26, 88);
         background-image: url(img/fondo_ilustracion_600.png);
         background-repeat: no-repeat;
         background-attachment: fixed;
         width: 100%;
-        max-height: 600px;
+        max-height: 951px;
         background-size: 100% auto;
-        color: white;
     }
 
     .transparencia {
         width: 100%;
-        max-height: 600px;
+        max-height: 951px;
         background-color: rgba(0, 0, 0, 0.50);
         display: flex;
         flex-direction: column;
@@ -771,7 +787,7 @@ footer {
     }
 
     .titulares {
-        padding: 130px 16px;
+        padding: 350px 16px 0 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
