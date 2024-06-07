@@ -732,13 +732,13 @@ footer {
 
 
 /*------MEDIA------*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
 
     /*------NAVEGADOR------*/
     #cabecera {
         max-width: 600px;
         width: 100%;
-        font-size: 0.9em;
+        font-size: 1.5em;
     }
 
     nav ul {
@@ -746,6 +746,7 @@ footer {
         width: 100%;
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .contenedor {
@@ -755,16 +756,6 @@ footer {
         justify-content: center;
         align-items: center;
         height: 290px;
-    }
-
-    .botonera a:hover {
-        color: white;
-        background-color: black;
-    }
-
-    .botonera a:active {
-        color: black;
-        background-color: darkgoldenrod;
     }
 
     /*------INICIO------*/
@@ -871,26 +862,17 @@ footer {
     /*------FOOTER------*/
 
     footer {
-        max-width: 600px;
-        background-color: black;
-        color: white;
-        font-family: "Kanit light", "sans-serif";
-        text-decoration: none;
         padding: 0 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #contenedor_footer {
-        padding: 0 100px;
-        font-size: 0.8em;
+        padding: 45px 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         flex-wrap: nowrap;
-        gap: 70px;
+        gap: 20px;
     }
 
     .redes {
