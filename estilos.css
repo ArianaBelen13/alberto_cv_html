@@ -120,11 +120,17 @@ nav li {
 .botonera a:hover {
     color: white;
     background-color: black;
+    transition: 0.5s;
 }
 
 .botonera a:active {
     color: black;
     background-color: darkgoldenrod;
+}
+
+#menu,
+#menu_check {
+    display: none;
 }
 
 /*------INICIO------*/
@@ -290,12 +296,18 @@ nav li {
     }
 }
 
+.bloque_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #columna_izquierda {
     width: 480px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
 .space_columnas {
@@ -370,11 +382,7 @@ nav li {
 #trabajos {
     background-size: 500%;
     background-image: linear-gradient(20deg, black, rgb(133, 26, 88), darkgoldenrod);
-    animation-name: degradado;
-    animation-duration: 6s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    /*animation: degradado 12s ease-in infinite alternate;*/
+    animation: degradado 6s ease-in infinite alternate;
 }
 
 @keyframes degradado {
@@ -544,6 +552,11 @@ nav li {
 .texto_video {
     width: 480px;
     color: white;
+
+    p {
+        padding: 0 0 40px 0;
+        border-bottom: 3px solid white;
+    }
 }
 
 .tamaño_video {
@@ -570,6 +583,7 @@ nav li {
 }
 
 form {
+    font-size: 1.3em;
     color: rgb(133, 26, 88);
     height: auto;
     display: flex;
@@ -596,7 +610,7 @@ form {
 
     p {
         font-family: "Kanit medium", "sans-serif";
-        font-size: 1.0em;
+        font-size: 1em;
     }
 }
 
@@ -610,9 +624,9 @@ input[type="text"],
 input[type="email"],
 input[type="tel"] {
     font-family: "Kanit light", "sans-serif";
-    font-size: 1.0em;
+    font-size: 1em;
     padding: 10px 24px;
-    margin: 5px 0 20px 0;
+    margin: 10px 0 15px 0;
     color: rgb(133, 26, 88);
     border: 3px solid rgb(133, 26, 88);
 }
@@ -623,12 +637,14 @@ input[type="tel"] {
 
 input[type="radio"] {
     appearance: none;
+    display: flex;
+    align-items: center;
 }
 
 input[type="radio"]::before {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: white;
     display: inline-flex;
@@ -640,7 +656,7 @@ input[type="radio"]:checked::before {
 
 textarea {
     font-family: "Kanit light", "sans-serif";
-    font-size: 1.0em;
+    font-size: 1em;
     width: 745px;
     height: 185px;
     padding: 10px 24px;
@@ -726,36 +742,64 @@ footer {
     gap: 8px;
 }
 
-
-
-
-
-
 /*------MEDIA------*/
 @media screen and (max-width: 600px) {
 
     /*------NAVEGADOR------*/
     #cabecera {
-        max-width: 600px;
-        width: 100%;
         font-size: 1.5em;
     }
 
     nav ul {
-        list-style: none;
         width: 100%;
+        height: calc(100% - 120px);
         display: flex;
         flex-direction: column;
         text-align: center;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 120px;
+        gap: 15px;
+        overflow-y: auto;
+    }
+
+    nav li {
+        padding: 20px 0;
+    }
+
+    .botonera a:active {
+        background: none;
+        color: darkgoldenrod;
     }
 
     .contenedor {
         padding: 0 16px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 290px;
+        height: 120px;
+    }
+
+    #menu_check:not(:checked)~ul {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 35px;
+    }
+
+    #menu_cerrar {
+        display: none;
+    }
+
+    #menu_check:checked~label #menu_abrir {
+        display: none;
+    }
+
+    #menu_check:checked~label #menu_cerrar {
+        display: block;
     }
 
     /*------INICIO------*/
@@ -764,26 +808,17 @@ footer {
         background-repeat: no-repeat;
         background-attachment: fixed;
         width: 100%;
-        max-height: 951px;
+        max-height: 800px;
         background-size: 100% auto;
     }
 
     .transparencia {
         width: 100%;
-        max-height: 951px;
-        background-color: rgba(0, 0, 0, 0.50);
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        max-height: 800px;
     }
 
     .titulares {
-        padding: 350px 16px 0 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
+        padding: 200px 16px 0 16px;
 
         h1 {
             font-size: 5em;
@@ -796,88 +831,118 @@ footer {
         }
     }
 
-    .flecha_bajada {
-        display: flex;
-        justify-content: center;
-        animation-name: flecha_movimiento;
-        animation-duration: 1s;
-        animation-direction: normal;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    @keyframes flecha_movimiento {
-        0% {
-            transform: translateY(-20px);
-        }
-
-        100% {
-            transform: translateY(30px);
-        }
-    }
-
     #bienvenida {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(133, 26, 88, 0.50) 100%), #000;
-        width: 100%;
-        margin: 0px auto;
-        padding: 100px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        gap: 40px;
     }
 
     .presentacion {
-        padding: 0 16px;
-        max-width: 900px;
-        color: white;
+        width: 568px;
+        gap: 30px;
+    }
+
+    .ilustraciones_destacadas {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+
+    /*------SOBRE MI------*/
+    #contenedor_curriculum {
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .presentacion_curriculum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .space_columnas {
+        display: flex;
+        flex-direction: column;
+        width: 510px;
+    }
+
+    #columna_derecha {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    /*------TRABAJOS------*/
+    .grid_imagenes {
+        grid-template: repeat(8, 1fr) / repeat(1, 1fr);
+    }
+
+    #galeria_oculta {
+        max-width: 568px;
+    }
+
+    .fraccion_galeria {
+        min-width: 568px;
+    }
+
+    .video_tumblr {
+        padding: 80px 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        text-align: center;
-        border-bottom: 3px solid white;
     }
 
-    .trabajos_destacados {
-        padding: 0 16PX;
-        color: white;
-        display: grid;
-        grid-gap: 32px;
-        justify-items: center;
-        justify-content: center;
+    /*------CONTACTO------*/
+    #estructura_contacto {
+        padding: 160px 0 80px 0;
     }
 
-    .ilustraciones_destacadas {
-        margin: 0 auto;
-        display: grid;
-        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
-        grid-gap: 32px;
-        justify-items: center;
-        justify-content: center;
+    .contacto {
+        width: 400px;
     }
 
+    form {
+        font-size: 1.5em;
+    }
 
+    #dos_columnas {
+        width: 514px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .campos_marcar {
+        gap: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        margin: 0 0 10px 0;
+    }
+
+    textarea {
+        width: 460px;
+    }
 
     /*------FOOTER------*/
-
     footer {
         padding: 0 16px;
     }
 
     #contenedor_footer {
-        padding: 45px 0;
+        padding: 50px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        flex-wrap: nowrap;
         gap: 20px;
-    }
-
-    .redes {
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 8px;
     }
 }

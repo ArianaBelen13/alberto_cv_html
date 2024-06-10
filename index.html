@@ -18,6 +18,10 @@
             cambiarDisplay('none')
         }
     </script>
+
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -29,7 +33,13 @@
             </a>
 
             <nav class="botonera">
-                <ul>
+                <input type="checkbox" id="menu_check">
+                <label id="menu" for="menu_check">
+                    <span id="menu_abrir"><img src="img/svg/toggle.svg" width="50px" height="40px"></span>
+                    <span id="menu_cerrar"><img src="img/svg/close_blanco.svg" width="50px" height="45px"></span>
+                </label>
+
+                <ul class="desplegable">
                     <li><a href="sobremi.html">Sobre mí</a></li>
                     <li><a href="trabajos.html">Trabajos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
