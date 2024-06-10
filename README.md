@@ -8,4 +8,5 @@
 
 <p><strong>Tamaño de pantalla: 1360 x 768</strong></p>
 <p><strong>Editor de código: Visual Studio Code</strong></p>
+<a href="https://www.figma.com/design/8gIrxbZzKKbW5cvR5bkPAC/Portafolio---Alberto-Ariana-Belen?node-id=243-185&t=uarbzJlMpeZIn3Uk-1" target="_blank">Mi Figma</a>
 
