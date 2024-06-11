@@ -465,7 +465,7 @@ nav li {
     justify-content: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 10;
 }
@@ -747,7 +747,7 @@ footer {
 
     /*------NAVEGADOR------*/
     #cabecera {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     nav ul {
@@ -836,7 +836,7 @@ footer {
     }
 
     .presentacion {
-        width: 568px;
+        padding: 0 16px 20px 16px;
         gap: 30px;
     }
 
@@ -845,21 +845,36 @@ footer {
     }
 
     /*------SOBRE MI------*/
-    #contenedor_curriculum {
+    .presentacion_curriculum {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #perfil_profesional {
+        width: 100%;
+        padding: 0 16px;
+
         h3 {
             text-align: center;
         }
     }
 
-    .presentacion_curriculum {
-        display: flex;
-        flex-direction: column;
+    .estructura_columnas h3 {
+        text-align: center;
     }
 
     .space_columnas {
+        padding: 0 16px;
         display: flex;
         flex-direction: column;
-        width: 510px;
+        align-items: center;
+    }
+
+    #columna_izquierda,
+    #columna_derecha {
+        width: 100%;
+        padding: 0 16px;
     }
 
     #columna_derecha {
@@ -890,6 +905,11 @@ footer {
         min-width: 568px;
     }
 
+    .texto_video {
+        width: 100%;
+        padding: 0 16px;
+    }
+
     .video_tumblr {
         padding: 80px 16px;
         display: flex;
@@ -904,7 +924,7 @@ footer {
     }
 
     .contacto {
-        width: 400px;
+        padding-inline: 16px;
     }
 
     form {
@@ -912,7 +932,6 @@ footer {
     }
 
     #dos_columnas {
-        width: 514px;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -929,7 +948,11 @@ footer {
     }
 
     textarea {
-        width: 460px;
+        max-width: 460px;
+    }
+
+    .boton_enviar {
+        padding: 0 16px;
     }
 
     /*------FOOTER------*/
