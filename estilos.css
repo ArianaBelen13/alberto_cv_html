@@ -137,11 +137,11 @@ nav li {
 .titulares_fondo {
     background-color: rgb(133, 26, 88);
     background-image: url(img/fondo_ilustracion.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
-    background-size: 100% auto;
     color: white;
 }
 
@@ -804,12 +804,10 @@ footer {
 
     /*------INICIO------*/
     .titulares_fondo {
-        background-image: url(img/fondo_ilustracion_600.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        width: 100%;
+        background-image: url(img/fondo_ilustracion.png);
+        background-position: center;
         max-height: 800px;
-        background-size: 100% auto;
+
     }
 
     .transparencia {
@@ -836,6 +834,7 @@ footer {
     }
 
     .presentacion {
+        max-width: 568px;
         padding: 0 16px 20px 16px;
         gap: 30px;
     }
@@ -844,7 +843,26 @@ footer {
         grid-template: repeat(1, 1fr) / repeat(1, 1fr);
     }
 
+    .ilustraciones_destacadas a img {
+        width: 400px;
+        height: 400px;
+    }
+
     /*------SOBRE MI------*/
+    #contenedor_curriculum {
+        p {
+            font-size: 1.2em;
+        }
+
+        .bold_items {
+            font-size: 1.2em;
+        }
+
+        li {
+            font-size: 1.2em;
+        }
+    }
+
     .presentacion_curriculum {
         width: 100%;
         display: flex;
@@ -895,6 +913,11 @@ footer {
     /*------TRABAJOS------*/
     .grid_imagenes {
         grid-template: repeat(8, 1fr) / repeat(1, 1fr);
+    }
+
+    .grid_imagenes a img {
+        width: 400px;
+        height: 400px;
     }
 
     #galeria_oculta {
