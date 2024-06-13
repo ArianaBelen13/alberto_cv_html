@@ -303,7 +303,7 @@ nav li {
 }
 
 #columna_izquierda {
-    width: 480px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -317,14 +317,9 @@ nav li {
     gap: 40px;
 }
 
-#columna_derecha {
-    display: flex;
-    justify-content: space-between;
-
-    li {
-        font-family: "Kanit medium", sans-serif;
-        font-size: 1.5em;
-    }
+#columna_derecha li {
+    font-family: "Kanit medium", sans-serif;
+    font-size: 1.5em;
 }
 
 .gap_derecha {
@@ -355,11 +350,9 @@ nav li {
     color: darkgoldenrod;
 }
 
-#idiomas {
-    li {
-        font-family: "Kanit light", "sans-serif";
-        font-size: 1.5em;
-    }
+#idiomas li {
+    font-family: "Kanit light", "sans-serif";
+    font-size: 1.5em;
 }
 
 #idiomas h3:hover {
@@ -371,11 +364,12 @@ nav li {
 }
 
 .medidor_de_progreso {
+    width: 480px;
     padding: 30px 0 0 0;
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    justify-content: space-between;
 }
 
 /*------TRABAJOS------*/
@@ -657,7 +651,6 @@ input[type="radio"]:checked::before {
 textarea {
     font-family: "Kanit light", "sans-serif";
     font-size: 1em;
-    width: 745px;
     height: 185px;
     padding: 10px 24px;
     margin: 8px 0 30px 0;
@@ -666,6 +659,7 @@ textarea {
 }
 
 .mensaje_enviar {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -745,19 +739,24 @@ footer {
 /*------MEDIA------*/
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 4em;
+        font-size: 5em;
         text-align: center;
     }
 
     h2 {
         font-size: 2em;
         text-align: center;
+        max-width: 500px;
     }
 
     p {
-        font-size: 1.2em
+        font-size: 1.2em;
     }
 
+    img {
+        transition: none;
+        transform: none;
+    }
 
     /*------NAVEGADOR------*/
     #cabecera {
@@ -773,7 +772,7 @@ footer {
         background-color: black;
         position: fixed;
         left: 0;
-        top: 100px;
+        top: 70px;
         gap: 15px;
         overflow-y: auto;
     }
@@ -790,7 +789,17 @@ footer {
     .contenedor {
         padding: 0 16px;
         display: flex;
-        height: 100px;
+        height: 80px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .botonera label img {
+        width: 30px;
+        height: 30px;
     }
 
     #menu_check:not(:checked)~ul {
@@ -801,7 +810,7 @@ footer {
         display: block;
         position: absolute;
         right: 16px;
-        top: 30px;
+        top: 25px;
     }
 
     #menu_cerrar {
@@ -834,6 +843,10 @@ footer {
 
     #bienvenida {
         gap: 40px;
+
+        p {
+            text-wrap: balance;
+        }
     }
 
     .presentacion {
@@ -842,17 +855,26 @@ footer {
         gap: 30px;
     }
 
-    .trabajos_destacados h2 {
-        text-align: center;
+
+    .trabajos_destacados {
+        h2 {
+            text-align: center;
+        }
     }
 
     .ilustraciones_destacadas {
         grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
     }
 
     .ilustraciones_destacadas a img {
         width: 400px;
         height: 400px;
+    }
+
+    .boton_ver_mas {
+        font-size: 0.8em;
     }
 
     /*------SOBRE MI------*/
@@ -872,6 +894,7 @@ footer {
 
     .presentacion_curriculum {
         width: 100%;
+        padding-bottom: 70px;
         display: flex;
         flex-direction: column;
 
@@ -883,15 +906,23 @@ footer {
 
     #perfil_profesional {
         max-width: 500px;
-        padding: 0 16px 30px 16px;
+        padding: 0 16px;
 
         h3 {
             text-align: center;
+        }
+
+        p {
+            text-wrap: stable;
         }
     }
 
     .estructura_columnas h3 {
         text-align: center;
+
+        p {
+            text-wrap: balance;
+        }
     }
 
     .space_columnas {
@@ -903,7 +934,7 @@ footer {
 
     #columna_izquierda,
     #columna_derecha {
-        width: 100%;
+        max-width: 500px;
         display: flex;
         justify-content: center;
     }
@@ -942,11 +973,11 @@ footer {
     }
 
     .fraccion_galeria {
-        min-width: 500px;
+        min-width: 100%;
     }
 
     .texto_video {
-        width: 500px;
+        width: 80%;
         padding: 0 16px 30px 16px;
     }
 
@@ -964,21 +995,28 @@ footer {
     }
 
     .contacto {
-        padding-inline: 16px;
+        padding-inline: 30px;
+        width: 80%;
     }
 
     form {
         font-size: 1.5em;
+        gap: 60px;
     }
 
     #dos_columnas {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 60px;
     }
 
     .campos_marcar {
         gap: 20px;
+    }
+
+    #marcar {
+        gap: 50px;
+        line-height: 30px;
     }
 
     input[type="text"],
@@ -987,8 +1025,13 @@ footer {
         margin: 0 0 10px 0;
     }
 
+    .mensaje_enviar {
+        width: 100%;
+        padding-inline: 16px;
+    }
+
     textarea {
-        max-width: 460px;
+        width: none;
     }
 
     .boton_enviar {
